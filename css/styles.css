@@ -1443,7 +1443,26 @@ iframe {
 	background-color:#6c7c7c;
 }
 
+.carousel-content {
+    color:black;
+    display:flex;
+    align-items:center;
+}
 
+#text-carousel {
+  width: 100%;
+  height: auto;
+  padding: 50px;
+}
 
+.carousel-control.right, .carousel-control.left {
+    background: none;
+    font-size: 60px;
+    margin-top: 4%;
+}
 
-
+#testimonial-div {
+    margin-left: auto;
+    margin-right: auto;
+    float: initial;
+}
