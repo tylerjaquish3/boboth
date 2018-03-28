@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
 
-<!--Tyler Jaquish, Developer
-	2015
--->
-
 <html>
 	<head>
 	<meta charset="utf-8">

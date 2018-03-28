@@ -27,52 +27,17 @@
 	<link href="css/animate.css" rel="stylesheet" media="screen">
 	<!-- Owl Carousel Assets -->
 	<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/styles.css" />
 	<!-- Font Awesome -->
 	<link href="font/css/font-awesome.min.css" rel="stylesheet">
-
-	<script type="text/javascript">
-		function validate() 
-		{
-			var fields = ["requestername", "phone", "date1", "time", "service"];
-			var messages = ["namemsg", "phonemsg", "date1msg", "timemsg", "servicemsg"];
-			
-			for(var index = 0; index < fields.length; index++) 
-			{
-				var x = fields[index];
-				var y = messages[index];
-				
-				if( document.appt[x].value == "" || index == 1 && document.appt.phone.value.match(/\d/g).length != 10)
-				{
-					document.getElementById(y).style.display="";
-					document.forms["appt"][fields[index]].style.border = "3px solid red";
-					return false;
-				}
-				else
-				{
-					document.getElementById(y).style.display="none";
-					document.forms["appt"][fields[index]].style.border = "none";
-				}
-			}
-			
-			var request = new Date(document.appt.date1.value);
-			var Today = new Date();
-			
-			if( request < Today )
-			{
-				document.forms["appt"]["date1"].style.border = "3px solid red";
-				document.getElementById("date2msg").style.display="";
-				return false;
-			}
-			
-			return true;
-		}
-
-	</script>
+	<link rel="stylesheet" href="css/styles.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
 
 </head>
 
 <body>
+	<?php
+	//MySQL Database Connect 
+	include 'datalogin.php';	
+	?>
 	<header class="header">
 		<div class="container">
 			<nav class="navbar navbar-inverse" role="navigation">
@@ -146,7 +111,6 @@
 				</div>
 			</div>
 			<br /><br /><br />
-			<!--/.container--> 
 		</div>
 	</section>
 
@@ -154,17 +118,14 @@
 	<section id="aboutUs">
 		<div class="container">
 			<div class="heading text-center"> 
-				<!-- Heading -->
 				<h2>Our Doctors</h2>
 				<p>Boboth Vision Clinic is a family owned and operated practice. Our optometrists are graduates of Sunnyside High School and Pacific University College of Optometry. 
 				Our staff pride themselves on taking the necessary time with each patient to provide exceptional service in a comfortable, caring and professional environment.
 				</div>
-			<!-- Team Member's Details -->
 			<div class="team-content">
 				<img class="img-responsive" src="images/doctors.jpg" alt="">
 			</div>
 	  	</div>
-	  	<!--/.container--> 
 	</section>
 
 	<!--Reviews -->
@@ -175,13 +136,51 @@
 				<p>Customer satisfaction is our number one priority. We take pride in providing the best eye care. 
 				That is why we appreciate when our patients take the time to tell us what makes us extraordinary, and what needs improvement.</p>
 
-				<p><a href="review.html" style="color:white"><img src="images/clipboard.gif" width="40">Leave Us a Review!</a></p>
+				<p><a href="review.html" style="color:white"><i class="fa fa-clipboard"></i> Leave Us a Review!</a></p>
 
-				<iframe style="width: 90%; height: 500px;" src="customer_reviews.php"></iframe>
+				<div id="text-carousel" class="carousel slide" data-ride="carousel">
+				    <!-- Wrapper for slides -->
+				    <div class="row">
+				        <div class="col-xs-offset-3 col-xs-6" id="testimonial-div">
+				            <div class="carousel-inner">
+
+				            	<?php
+				            	$first = true;
+				            	$result = mysqli_query($conn,"SELECT * FROM reviews WHERE approved = 1");
+								while($row = mysqli_fetch_array($result)) 
+								{
+									?>
+
+					                <div class="item <?php if($first) { echo 'active'; } ?>">
+					                    <div class="carousel-content">
+					                        <div>
+					                            <p><?php echo $row['comments']; ?></p>
+					                        </div>
+					                    </div>
+					                </div>
+
+				                <?php 
+				                	$first = false;
+				            	} ?>
+				                
+				            </div>
+				        </div>
+				    </div>
+
+					<!-- Controls --> 
+					<a class="left carousel-control" href="#text-carousel" data-slide="prev">
+						<i class="fa fa-angle-left"></i>
+					</a>
+					<a class="right carousel-control" href="#text-carousel" data-slide="next">
+						<i class="fa fa-angle-right"></i>
+					</a>
+
+				</div>
 			</div>	 
 		</div>
 	</section>
 
+	<!-- Appointment -->
 	<section id="appointment" class="page-section">
 		<div class="container">
 		    <div class="heading text-center"> 
@@ -201,13 +200,13 @@
 				
 					<!-- Request Contact Lenses -->
 					<p>To request contact lenses, <br />click the button below and complete the form. <br />(Note: A current prescription is required.)</p>
-					<a href="order_cl_form.html" class="myButton">Order Contact Lenses</a>
+					<a href="http://boboth.myclstore.com" class="myButton">Order Contact Lenses</a>
 			    </div>
 			</div>
 		</div>
 	</section>
 
-
+	<!-- Contact Us -->
 	<section id="contactUs" class="contact-parlex">
 	  	<div class="parlex-back">
 	    	<div class="container-fluid">
@@ -282,7 +281,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a> 
 
 	<!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]--> 
