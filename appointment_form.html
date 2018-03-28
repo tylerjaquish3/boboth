@@ -1,0 +1,156 @@
+<!--
+Author: Tyler Jaquish, 2015
+-->
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-gb" class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--[if lt IE 9]> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+<title>Boboth Vision Clinic</title>
+<meta name="description" content="">
+<meta name="author" content="WebThemez">
+<!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<!--[if lte IE 8]>
+		<script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
+	<![endif]-->
+<link rel="shortcut icon" href="images/logo.ico" type="image/png">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
+<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<link href="css/animate.css" rel="stylesheet" media="screen">
+<!-- Owl Carousel Assets -->
+<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+<!-- Font Awesome -->
+<link href="font/css/font-awesome.min.css" rel="stylesheet">
+
+	<script type="text/javascript">
+		function validate() 
+		{
+			var fields = ["requestername", "phone", "date1", "time", "service"];
+			var messages = ["namemsg", "phonemsg", "date1msg", "timemsg", "servicemsg"];
+			
+			for(var index = 0; index < fields.length; index++) 
+			{
+				var x = fields[index];
+				var y = messages[index];
+				
+				if( document.appt[x].value == "" || index == 1 && document.appt.phone.value.match(/\d/g).length != 10)
+				{
+					document.getElementById(y).style.display="";
+					document.forms["appt"][fields[index]].style.border = "3px solid red";
+					return false;
+				}
+				else
+				{
+					document.getElementById(y).style.display="none";
+					document.forms["appt"][fields[index]].style.border = "none";
+				}
+			}
+			
+			var request = new Date(document.appt.date1.value);
+			var Today = new Date();
+			
+			if( request < Today )
+			{
+				document.forms["appt"]["date1"].style.border = "3px solid red";
+				document.getElementById("date2msg").style.display="";
+				return false;
+			}
+			
+			return true;
+		}
+	</script>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="heading text-center"> 
+        <h2>Request Appointment</h2>
+        <p>Complete this form in its entirety, and our staff will contact you to confirm your appointment.</p>
+    </div>
+	
+    <div class="section group">
+        <div class="col span_2_of_2">
+
+			<!-- Request Appointment form-->
+			<form action="appointment_request.php" method="post" name="appt" onsubmit="return(validate());">
+				Name:<br />
+				<input type="text" name="requestername" min="4" placeholder="first & last"><span class="asterisk">*</span><br />
+				Phone:<br />
+				<input type="tel" name="phone" placeholder="phone number"><span class="asterisk">*</span><br />
+				E-mail:<br />
+				<input type="email" name="email" min="6" placeholder="email"><br /><br />
+				Desired Date: <br />(first choice) <br />
+				<input type="date" name="date1" placeholder="mm/dd/yyyy"><span class="asterisk">*</span><br />
+				(second choice) <br />
+				<input type="date" name="date2" placeholder="mm/dd/yyyy"><br />
+				(third choice)<br />
+				<input type="date" name="date3" placeholder="mm/dd/yyyy"><br /><br />
+				Desired Time:<br>
+				<select name="time">
+					<option value="" disabled selected>Select time</option>
+					<option value="8:00am">8:00AM</option>
+					<option value="8:30am">8:30AM</option>
+					<option value="9:00am">9:00AM</option>
+					<option value="9:30am">9:30AM</option>
+					<option value="10:00am">10:00AM</option>
+					<option Value="10:30am">10:30AM</option>
+					<option value="11:00am">11:00AM</option>
+					<option value="11:30am">11:30AM</option>
+					<option value="12:00pm">12:00PM</option>
+					<option value="12:30pm">12:30PM</option>
+					<option value="1:00pm">1:00PM</option>
+					<option value="1:30pm">1:30PM</option>
+					<option value="2:00pm">2:00PM</option>
+					<option value="2:30pm">2:30PM</option>
+					<option value="3:00pm">3:00PM</option>
+					<option value="3:30pm">3:30PM</option>
+					<option value="4:00pm">4:00PM</option>
+					<option value="4:30pm">4:30PM</option>
+				</select><span class="asterisk">*</span>
+
+				<br />I'm making an appointment for:<br />
+				<select name="service">
+					<option value="" disabled selected>Select service</option>
+					<option value="Eye Exam">Eye Exam</option>
+					<option value="Pre-Surgical Evaluation">Pre-Surgical Evaluation</option>
+					<option value="Contact Lens Fitting">Contact Lens Fitting</option>
+					<option value="Family Eye Care">Family Eye Care</option>
+					<option value="Diabetic Eye Exam">Diabetic Eye Exam</option>
+					<option Value="Other">Other</option>
+				</select><span class="asterisk">*</span>
+				
+				<br />Comment:<br />
+				<input type="text" name="comment" size="40"><br><br>
+				
+				<div id="requiredmsg" style="color:Red;">* Required</div>
+				<div id="namemsg" style="color:Red;display:none">Provide your name</div>
+				<div id="phonemsg" style="color:Red;display:none">Provide a valid phone number</div>
+				<div id="date1msg" style="color:Red;display:none">Choose a desired date (first choice)</div>
+				<div id="date2msg" style="color:Red;display:none">Choose a date after today</div>
+				<div id="timemsg" style="color:Red;display:none">Choose a preferred time</div>
+				<div id="servicemsg" style="color:Red;display:none">Choose a requested service</div>
+				
+				<input type="submit" name="submit_appt_request" value="Submit">
+				
+			</form>
+
+
+	    </div>
+	</div>
+</div>
+
+</body>
+</html>
