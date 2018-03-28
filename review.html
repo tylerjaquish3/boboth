@@ -1,0 +1,243 @@
+<!--
+Author: Tyler Jaquish, 2015
+-->
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-gb" class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--[if lt IE 9]> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+<title>Boboth Vision Clinic</title>
+<meta name="description" content="">
+<meta name="author" content="WebThemez">
+<!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<!--[if lte IE 8]>
+		<script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
+	<![endif]-->
+<link rel="shortcut icon" href="images/logo.ico" type="image/png">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
+<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<link href="css/animate.css" rel="stylesheet" media="screen">
+<!-- Owl Carousel Assets -->
+<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+<!-- Font Awesome -->
+<link href="font/css/font-awesome.min.css" rel="stylesheet">
+
+<script language=JavaScript>
+	function check_length(my_form)
+	{
+		maxLen = 500; // max number of characters allowed
+		if (my_form.comments.value.length >= maxLen) {
+			// Reached the Maximum length so trim the textarea
+			my_form.comments.value = my_form.comments.value.substring(0, maxLen);
+		}
+		else{ // Maximum length not reached so update the value of my_text counter
+			my_form.text_num.value = maxLen - my_form.comments.value.length;}
+	}
+</script>
+
+<script type="text/javascript">
+	function validate() 
+	{
+		var fields = ["appointments", "environment", "staff", "trust", "explains", "listens", "likelihood", "comments"];
+		var messages = ["appointmentsmsg", "environmentmsg", "staffmsg", "trustmsg", "explainsmsg", "listensmsg", "likelihoodmsg", "commentsmsg"];
+		var space = [0,0,0,200,500,1000,1000,1000];
+		
+		for(var index = 0; index < fields.length; index++) 
+		{
+			var x = fields[index];
+			var y = messages[index];
+			var z = space[index];
+			
+			if( document.ratingsForm[x].value == "" )
+			{
+				document.getElementById(y).style.display="";
+				window.scrollTo(0,z);
+				return false;
+			}
+			else
+			{
+				document.getElementById(y).style.display="none";
+			}
+		}
+		return true;
+	}
+</script>
+
+</head>
+
+<body>
+<header class="header">
+  <div class="container">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a href="#" class="navbar-brand scroll-top logo  animated bounceInLeft"><b><i></i>Boboth Vision Clinic</b></a> </div>
+    </nav>
+    <!--/.navbar--> 
+  </div>
+  <!--/.container--> 
+</header>
+<!--/.header-->
+<div id="#top"></div>
+
+<section id="work" class="page-section color">
+  <div class="container">
+    <div class="heading text-center"> 
+      <!-- Heading -->
+      <br /><br /><br /><h2>Customer Review Form</h2>
+      <p>Please review and rate your experience at Boboth Vision Clinic. <br />(5 stars = Extraordinary, 1 star = Needs Improvement)</p>
+    </div>
+		<form method="post" action="review_send.php" id="ratingsForm" name="ratingsForm" onsubmit="return(validate());">
+			<h4>Office</h4>
+			
+			<p><div id="appointmentsmsg" style="color:Red;display:none">Please provide a rating for the following question</div>Ease of scheduling appointments</p>
+			<div class="stars">
+				<input type="radio" name="appointments" class="star-1" id="star-1" value="1" />
+				<label class="star-1" for="star-1">1</label>
+				<input type="radio" name="appointments" class="star-2" id="star-2" value="2" />
+				<label class="star-2" for="star-2">2</label>
+				<input type="radio" name="appointments" class="star-3" id="star-3" value="3" />
+				<label class="star-3" for="star-3">3</label>
+				<input type="radio" name="appointments" class="star-4" id="star-4" value="4" />
+				<label class="star-4" for="star-4">4</label>
+				<input type="radio" name="appointments" class="star-5" id="star-5" value="5" />
+				<label class="star-5" for="star-5">5</label>
+				<span></span>
+			</div>
+			<br /><p><div id="environmentmsg" style="color:Red;display:none">Please provide a rating for the following question</div>Office environment, cleanliness, comfort, etc.</p>
+			<div class="stars">
+				<input type="radio" name="environment" class="star-1" id="star-6" value="1" />
+				<label class="star-6" for="star-6">1</label>
+				<input type="radio" name="environment" class="star-2" id="star-7" value="2" />
+				<label class="star-7" for="star-7">2</label>
+				<input type="radio" name="environment" class="star-3" id="star-8" value="3" />
+				<label class="star-8" for="star-8">3</label>
+				<input type="radio" name="environment" class="star-4" id="star-9" value="4" />
+				<label class="star-9" for="star-9">4</label>
+				<input type="radio" name="environment" class="star-5" id="star-10" value="5"/>
+				<label class="star-10" for="star-10">5</label>
+				<span></span>
+			</div>
+			
+			<br /><p><div id="staffmsg" style="color:Red;display:none">Please provide a rating for the following question</div>Staff friendliness and courteousness</p>
+			<div class="stars">
+				<input type="radio" name="staff" class="star-1" id="star-11" value="1" />
+				<label class="star-11" for="star-11">1</label>
+				<input type="radio" name="staff" class="star-2" id="star-12" value="2" />
+				<label class="star-12" for="star-12">2</label>
+				<input type="radio" name="staff" class="star-3" id="star-13" value="3" />
+				<label class="star-13" for="star-13">3</label>
+				<input type="radio" name="staff" class="star-4" id="star-14" value="4" />
+				<label class="star-14" for="star-14">4</label>
+				<input type="radio" name="staff" class="star-5" id="star-15" value="5" />
+				<label class="star-15" for="star-15">5</label>
+				<span></span>
+			</div>
+			<hr />
+			<h4>Provider</h4>
+			
+			<p><div id="trustmsg" style="color:Red;display:none">Please provide a rating for the following question</div>Level of trust in provider's decisions</p>
+			<div class="stars">
+				<input type="radio" name="trust" class="star-1" id="star-16" value="1" />
+				<label class="star-16" for="star-16">1</label>
+				<input type="radio" name="trust" class="star-2" id="star-17" value="2" />
+				<label class="star-17" for="star-17">2</label>
+				<input type="radio" name="trust" class="star-3" id="star-18" value="3" />
+				<label class="star-18" for="star-18">3</label>
+				<input type="radio" name="trust" class="star-4" id="star-19" value="4" />
+				<label class="star-19" for="star-19">4</label>
+				<input type="radio" name="trust" class="star-5" id="star-20" value="5" />
+				<label class="star-20" for="star-20">5</label>
+				<span></span>
+			</div>
+			
+			<br /><p><div id="explainsmsg" style="color:Red;display:none">Please provide a rating for the following question</div>How well provider explains medical conditions</p>
+			<div class="stars">
+				<input type="radio" name="explains" class="star-1" id="star-21" value="1" />
+				<label class="star-21" for="star-21">1</label>
+				<input type="radio" name="explains" class="star-2" id="star-22" value="2" />
+				<label class="star-22" for="star-22">2</label>
+				<input type="radio" name="explains" class="star-3" id="star-23" value="3" />
+				<label class="star-23" for="star-23">3</label>
+				<input type="radio" name="explains" class="star-4" id="star-24" value="4" />
+				<label class="star-24" for="star-24">4</label>
+				<input type="radio" name="explains" class="star-5" id="star-25" value="5" />
+				<label class="star-25" for="star-25">5</label>
+				<span></span>
+			</div>
+			
+			<br /><p><div id="listensmsg" style="color:Red;display:none">Please provide a rating for the following question</div>How well provider listens and answers questions</p>
+			<div class="stars">
+				<input type="radio" name="listens" class="star-1" id="star-26" value="1" />
+				<label class="star-26" for="star-26">1</label>
+				<input type="radio" name="listens" class="star-2" id="star-27" value="2" />
+				<label class="star-27" for="star-27">2</label>
+				<input type="radio" name="listens" class="star-3" id="star-28" value="3" />
+				<label class="star-28" for="star-28">3</label>
+				<input type="radio" name="listens" class="star-4" id="star-29" value="4" />
+				<label class="star-29" for="star-29">4</label>
+				<input type="radio" name="listens" class="star-5" id="star-30" value="5" />
+				<label class="star-30" for="star-30">5</label>
+				<span></span>
+			</div>
+			<hr />
+			<h4>Overall</h4> 
+			
+			<p><div id="likelihoodmsg" style="color:Red;display:none">Please provide a rating for the following question</div>Likelihood of recommending Boboth Vision Clinic to family and friends</p>
+			<div class="stars">
+				<input type="radio" name="likelihood" class="star-1" id="star-31" value="1" />
+				<label class="star-31" for="star-31">1</label>
+				<input type="radio" name="likelihood" class="star-2" id="star-32" value="2" />
+				<label class="star-32" for="star-32">2</label>
+				<input type="radio" name="likelihood" class="star-3" id="star-33" value="3" />
+				<label class="star-33" for="star-33">3</label>
+				<input type="radio" name="likelihood" class="star-4" id="star-34" value="4" />
+				<label class="star-34" for="star-34">4</label>
+				<input type="radio" name="likelihood" class="star-5" id="star-35" value="5" />
+				<label class="star-35" for="star-35">5</label>
+				<span></span>
+			</div>
+			<br /><p>Comments</p>
+			
+			<div id="commentsmsg" style="color:Red;display:none">Please provide comments</div>
+			<textarea onKeyPress=check_length(this.form); onKeyDown=check_length(this.form); name="comments" placeholder="Required"	rows=6 cols=80></textarea>
+			<br> 
+			<input size=2 value=500 name=text_num> Characters Left
+			
+			<br /><br /><p>Name</p>
+			<input type="text" size="30" name="username" placeholder="Optional">
+			<br /><br />
+			
+			<input type="submit" name="submit" value="Submit"></p>
+		</form>
+  </div>
+</section>
+
+</section>
+<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a> 
+
+<!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]--> 
+<script src="js/modernizr-latest.js"></script> 
+<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script> 
+<script src="js/bootstrap.min.js" type="text/javascript"></script> 
+<script src="js/jquery.isotope.min.js" type="text/javascript"></script> 
+<script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script> 
+<script src="js/jquery.nav.js" type="text/javascript"></script> 
+<script src="js/jquery.fittext.js"></script> 
+<script src="js/waypoints.js"></script> 
+<script src="js/custom.js" type="text/javascript"></script> 
+<script src="js/owl-carousel/owl.carousel.js"></script>
+</body>
+</html>
