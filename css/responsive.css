@@ -1,0 +1,21 @@
+
+@media only screen and (max-width: 480px) {
+	
+}
+
+@media only screen and (max-width: 768px) {
+	.carousel-control.right, .carousel-control.left {
+	    font-size: 30px;
+	}
+
+	#text-carousel {
+	    padding: 0px 50px;
+	    min-height: 120px;
+    	margin-top: 40px;
+	}
+
+}
+
+@media only screen and (max-width: 992px) {
+
+}
