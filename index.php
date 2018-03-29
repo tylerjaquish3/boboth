@@ -30,6 +30,7 @@
 	<!-- Font Awesome -->
 	<link href="font/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/styles.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
+	<link rel="stylesheet" href="css/responsive.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
 
 </head>
 
@@ -121,7 +122,7 @@
 				<h2>Our Doctors</h2>
 				<p>Boboth Vision Clinic is a family owned and operated practice. Our optometrists are graduates of Sunnyside High School and Pacific University College of Optometry. 
 				Our staff pride themselves on taking the necessary time with each patient to provide exceptional service in a comfortable, caring and professional environment.
-				</div>
+			</div>
 			<div class="team-content">
 				<img class="img-responsive" src="images/doctors.jpg" alt="">
 			</div>
@@ -141,21 +142,19 @@
 				<div id="text-carousel" class="carousel slide" data-ride="carousel">
 				    <!-- Wrapper for slides -->
 				    <div class="row">
-				        <div class="col-xs-offset-3 col-xs-6" id="testimonial-div">
+				        <div class="col-md-offset-3 col-md-6 col-xs-12" id="testimonial-div">
 				            <div class="carousel-inner">
 
 				            	<?php
 				            	$first = true;
 				            	$result = mysqli_query($conn,"SELECT * FROM reviews WHERE approved = 1");
 								while($row = mysqli_fetch_array($result)) 
-								{
+								{ 
 									?>
 
 					                <div class="item <?php if($first) { echo 'active'; } ?>">
 					                    <div class="carousel-content">
-					                        <div>
-					                            <p><?php echo $row['comments']; ?></p>
-					                        </div>
+				                            <p><i class="fa fa-quote-left"></i> <?php echo $row['comments']; ?> <i class="fa fa-quote-right"></i></p>
 					                    </div>
 					                </div>
 
@@ -209,68 +208,93 @@
 	<!-- Contact Us -->
 	<section id="contactUs" class="contact-parlex">
 	  	<div class="parlex-back">
-	    	<div class="container-fluid">
-				<div class="row">
-					<div class="heading text-center"> 
-						<h2>Contact Us</h2>
-					</div>
+	    	<div class="container">
+				<div class="heading text-center"> 
+					<h2>Contact Us</h2>
 				</div>
-				<div class="row mrgn30">
-			  
-					<!-- Google Map -->
-					<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-					<div class="col-md-5">
-						<div id="gmap_canvas" style="height:350px; width:90%; margin-left:auto; margin-right: auto;">
-						</div>
-						<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+				
+				<div class="row">
+
+					<div class="col-md-6">
+						<table class="table">
+							<tbody>
+							<tr>
+								<th scope="row">Address</th>
+								<td>403 N. Euclid Rd<br />
+									Grandview, WA 98930</td>
+							</tr>
+							<tr>
+								<th scope="row">Phone</th>
+								<td><a href="tel:509-882-2650">509.882.2650</a></td>
+							</tr>
+							<tr>
+								<th scope="row">Fax</th>
+								<td>509.882.4225</td>
+							</tr>
+							<tr>
+								<th scope="row">Email</th>
+								<td><a href="mailto:doctors@bobothvision.com">doctors@bobothvision.com</a></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<a href="https://facebook.com/bobothvision"><i class="fa fa-facebook-square"></i> Like Us On Facebook</a>
+								</th>
+							</tbody>
+						</table>
 					</div>
-					<script type="text/javascript"> 
-						function init_map()
-							{var myOptions = {zoom:14,center:new google.maps.LatLng(46.261593,-119.91532890000002),mapTypeId: google.maps.MapTypeId.ROADMAP};
-							map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
-							marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(46.261593, -119.91532890000002)});
-							infowindow = new google.maps.InfoWindow({content:"<b>Boboth Vision Clinic</b><br/>403 N. Euclid Rd<br/>Grandview, WA 98930" });
-							google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});
-							}
-							google.maps.event.addDomListener(window, 'load', init_map);
-					</script>
-			
-				<div class="col-md-2 text-center">
-				  <h4>Address:</h4>
-				  <address>
-				  403 N. Euclid Rd<br />
-				  Grandview, WA 98930<br />
-				  </address>
-				  <h4>Phone:</h4>
-				  <phone>
-				  (509)882-2650<br />
-				  </phone>
-				  <h4>Fax:</h4>
-				  <fax>
-				  (509)882-4225<br />
-				  </fax>
-				  <h4>Email:</h4>
-				  <email>
-				  doctors@bobothvision.com<br />
-				  </email>
-				  <h4>Office Hours:</h4>
-					<b>Monday - Wednesday</b> <br />
-					8:30 am - 5:30 pm<br />
-					<b>Thursday</b><br />
-					8:00 am - 5:00 pm<br />
-					<b>Friday</b><br />
-					7:00 am - 12:00 pm
-				  
+
+					<div class="col-md-6 col-xs-12">
+						<form class="contact-form">
+							<fieldset>
+								<div class="coll-1">							  
+									<input name="name" type="text" value="" required placeholder="Name:"><br>
+								</div>
+								<div class="coll-2">
+									<input name="email" type="email" value="" required placeholder="E-mail:"><br>
+								</div>
+								<div class="coll-3">
+									<input name="phone" type="tel" value="" placeholder="Phone:"><br>
+								</div>
+								<div class="clear"></div>
+								<div>
+									<textarea name="message" required placeholder="Message:"></textarea><br>
+								</div>
+								
+								<input type="hidden" name="msg-type" value="generic">
+								
+							</fieldset>
+							<div class="buttons-wrapper clearfix">
+								<input type="submit" name="send-msg">
+							</div>
+						</form>
+					</div>
 				</div>
 
-				<div class="col-md-5 text-center">
-					<img src="images/staff.jpg">
-					<br /><br /><h4><a href="https://www.facebook.com/bobothvision" style="color:white"><img src="images/facebook-logo.jpg" width="25">Like Us On Facebook</a></h4>
+				<div class="row move-down30">
+					<div class="col-xs-12 text-center">
+						<h4>Office Hours</h4>
+					</div>
 				</div>
-			
-	      </div>
-	    </div>
-	  </div>
+				<div class="row">
+					<div class="col-md-4 col-xs-12 text-right">
+						<b>Monday - Wednesday</b> <br />
+						8:30 am - 5:30 pm
+					</div>
+					<div class="col-md-4 col-xs-12 text-center">
+						<b>Thursday</b><br />
+						8:00 am - 5:00 pm
+					</div>
+					<div class="col-md-4 col-xs-12 text-left">
+						<b>Friday</b><br />
+						7:00 am - 12:00 pm
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="no-margin">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22067.429505342512!2d-119.93283876136263!3d46.26158427911841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5498185d7f08d20d%3A0x6fc7617b1d54f622!2s403+N+Euclid+Rd%2C+Grandview%2C+WA+98930!5e0!3m2!1sen!2sus!4v1522297640086" width="100%" height="300" frameborder="0"></iframe>
 	</section>
 
 	<!-- footer -->

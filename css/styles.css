@@ -538,7 +538,7 @@ a.arrow-link:hover {
 	box-shadow: 1px 1px 1px rgba(0,0,0,0.1) inset, 1px 1px 1px rgba(255,255,255,0.1);
 	border: 2px solid #005f8d;
 }
-img, video, iframe, embed, object {
+img, video, embed, object {
 	max-width: 100%;
 	height: auto;
 }
@@ -568,8 +568,8 @@ img, video, iframe, embed, object {
 	letter-spacing: 1px;
 	color: #222;
 }
-.fluid-video-wrapper {
-	margin-top: 18px;
+.move-down30 {
+	margin-top: 30px;
 }
 #aboutUs .left {
 	padding-right: 32px;
@@ -1387,20 +1387,6 @@ table.details td{
 	padding: 5px;
 }
 
-
-iframe {
-  margin-top: 20px;
-  margin-bottom: 30px;
-
-  -moz-border-radius: 12px;
-  -webkit-border-radius: 12px;
-  border-radius: 12px;
-
-  -moz-box-shadow: 4px 4px 14px #000;
-  -webkit-box-shadow: 4px 4px 14px #000;
-  box-shadow: 4px 4px 14px #000;
-}
-
 .asterisk {
 	color: red;
 	font-size: 18px;
@@ -1445,7 +1431,7 @@ iframe {
 
 .carousel-content {
     color:black;
-    display:flex;
+    display:block;
     align-items:center;
 }
 
@@ -1455,14 +1441,73 @@ iframe {
   padding: 50px;
 }
 
+.carousel-content p {
+    font-size: 1em;
+    text-align: center;
+}
+
+.carousel-inner .item .active {
+	margin: auto;	
+}
+
 .carousel-control.right, .carousel-control.left {
     background: none;
     font-size: 60px;
-    margin-top: 4%;
 }
 
 #testimonial-div {
     margin-left: auto;
     margin-right: auto;
     float: initial;
+}
+
+.fa-quote-left {
+	margin-right: 10px;
+}
+
+.fa-quote-right {
+	margin-left: 10px;
+}
+
+.contact-form input, textarea {
+    padding: 9px 14px 8px;
+    margin: 0;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: normal;
+    color: #fff;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    border: 1px solid #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    float: left;
+    border-radius: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+
+#contactUs input[type="submit"] {
+    margin-top: 30px;
+}
+
+#contactUs a {
+    color: white;
+}
+
+.contact-form input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+
+#contactUs table tr th, td {
+	border: none !important;
+}
+
+.no-margin {
+    margin: 0;
+    padding: 0;
 }
