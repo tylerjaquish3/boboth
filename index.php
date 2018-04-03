@@ -38,6 +38,11 @@
 	<?php
 	//MySQL Database Connect 
 	include 'datalogin.php';	
+
+	$showMessage = false;
+	if (isset($_GET['success']) && $_GET['success']) {
+		$showMessage = true;
+	}
 	?>
 	<header class="header">
 		<div class="container">
@@ -244,7 +249,7 @@
 					</div>
 
 					<div class="col-md-6 col-xs-12">
-						<form class="contact-form">
+						<form class="contact-form" method="post" action="send_email.php">
 							<fieldset>
 								<div class="coll-1">							  
 									<input name="name" type="text" value="" required placeholder="Name:"><br>
@@ -264,7 +269,7 @@
 								
 							</fieldset>
 							<div class="buttons-wrapper clearfix">
-								<input type="submit" name="send-msg">
+								<input type="submit" id="send-msg">
 							</div>
 						</form>
 					</div>
@@ -276,7 +281,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-4 col-xs-12 text-right">
+					<div class="col-md-2 col-md-offset-2 col-xs-12 text-center">
 						<b>Monday - Wednesday</b> <br />
 						8:30 am - 5:30 pm
 					</div>
@@ -284,7 +289,7 @@
 						<b>Thursday</b><br />
 						8:00 am - 5:00 pm
 					</div>
-					<div class="col-md-4 col-xs-12 text-left">
+					<div class="col-md-2 col-xs-12 text-center">
 						<b>Friday</b><br />
 						7:00 am - 12:00 pm
 					</div>
@@ -308,16 +313,27 @@
 
 	<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a> 
 
+	<div class="modal" tabindex="-1" role="dialog" id="success">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-center">
+					<p>Your message was successfully sent.</p>
+				
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]--> 
-	<script src="js/modernizr-latest.js"></script> 
 	<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script> 
 	<script src="js/bootstrap.min.js" type="text/javascript"></script> 
-	<script src="js/jquery.isotope.min.js" type="text/javascript"></script> 
-	<script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script> 
-	<script src="js/jquery.nav.js" type="text/javascript"></script> 
-	<script src="js/jquery.fittext.js"></script> 
-	<script src="js/waypoints.js"></script> 
-	<script src="js/custom.js" type="text/javascript"></script> 
-	<script src="js/owl-carousel/owl.carousel.js"></script>
+
 </body>
+
+<script type="text/javascript">
+	if ("<?php echo $showMessage; ?>") {
+		$('#success').modal('show');
+	}
+</script>
 </html>
