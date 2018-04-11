@@ -2,10 +2,10 @@
 
 if(isset($_POST['email'])) {
  
-    // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "doctors@bobothvision.com";
+    // $email_to = "doctors@bobothvision.com";
     $email_subject = "New message from bobothvision.com";
- 
+    $email_to = "tylerjaquish@gmail.com";
+
     function died($error) {
         // your error code can go here
         echo "We are very sorry, but there were error(s) found with the form you submitted. ";

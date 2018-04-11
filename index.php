@@ -35,9 +35,7 @@
 </head>
 
 <body>
-	<?php
-	//MySQL Database Connect 
-	include 'datalogin.php';	
+	<?php	
 
 	$showMessage = false;
 	if (isset($_GET['success']) && $_GET['success']) {
@@ -142,31 +140,43 @@
 				<p>Customer satisfaction is our number one priority. We take pride in providing the best eye care. 
 				That is why we appreciate when our patients take the time to tell us what makes us extraordinary, and what needs improvement.</p>
 
-				<p><a href="review.html" style="color:white"><i class="fa fa-clipboard"></i> Leave Us a Review!</a></p>
+				<!-- <p><a href="review.html" style="color:white"><i class="fa fa-clipboard"></i> Leave Us a Review!</a></p> -->
 
 				<div id="text-carousel" class="carousel slide" data-ride="carousel">
 				    <!-- Wrapper for slides -->
 				    <div class="row">
 				        <div class="col-md-offset-3 col-md-6 col-xs-12" id="testimonial-div">
 				            <div class="carousel-inner">
-
-				            	<?php
-				            	$first = true;
-				            	$result = mysqli_query($conn,"SELECT * FROM reviews WHERE approved = 1");
-								while($row = mysqli_fetch_array($result)) 
-								{ 
-									?>
-
-					                <div class="item <?php if($first) { echo 'active'; } ?>">
-					                    <div class="carousel-content">
-				                            <p><i class="fa fa-quote-left"></i> <?php echo $row['comments']; ?> <i class="fa fa-quote-right"></i></p>
-					                    </div>
-					                </div>
-
-				                <?php 
-				                	$first = false;
-				            	} ?>
-				                
+				                <div class="item active">
+				                    <div class="carousel-content">
+			                            <p><i class="fa fa-quote-left"></i> Dr. Everett was very caring and explained in great detail also went back to charts to last year visit to compare this exam. Great doctor! <i class="fa fa-quote-right"></i></p>
+				                    </div>
+				                </div>
+				                <div class="item">
+				                    <div class="carousel-content">
+			                            <p><i class="fa fa-quote-left"></i> I enjoyed the staff friendless & willingness to help. Dr. Cole is genuine. <i class="fa fa-quote-right"></i></p>
+				                    </div>
+				                </div>	
+				                <div class="item">
+				                    <div class="carousel-content">
+			                            <p><i class="fa fa-quote-left"></i> Appreciated the thoroughness of my exam and and the time taken to answer questions. <i class="fa fa-quote-right"></i></p>
+				                    </div>
+				                </div>	
+				                <div class="item">
+				                    <div class="carousel-content">
+			                            <p><i class="fa fa-quote-left"></i> Dr. Fred Boboth has been my optometrist for probably twenty years. The eye care is excellent; he and his staff are always courteous, friendly and helpful. <i class="fa fa-quote-right"></i></p>
+				                    </div>
+				                </div>	
+				                <div class="item">
+				                    <div class="carousel-content">
+			                            <p><i class="fa fa-quote-left"></i> Had a nice visit & the reception was the best. The woman went out of her way to help me with my selection & an easier way to get prescriotion easier :-D Thank you. <i class="fa fa-quote-right"></i></p>
+				                    </div>
+				                </div>
+				                <div class="item">
+				                    <div class="carousel-content">
+			                            <p><i class="fa fa-quote-left"></i> Loved the environment and the friendly staff. Definitely coming back and recommending this palace to my friends and family! <i class="fa fa-quote-right"></i></p>
+				                    </div>
+				                </div>						                
 				            </div>
 				        </div>
 				    </div>
