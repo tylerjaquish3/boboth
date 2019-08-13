@@ -1511,3 +1511,17 @@ table.details td{
     margin: 0;
     padding: 0;
 }
+
+
+/*********************************
+Added for quotes section
+*********************************/
+
+.full-width {
+	width: 100%;
+}
+
+.pull-left {
+	float: left;
+	margin-left: 0px;
+}
