@@ -1516,6 +1516,19 @@ table.details td{
 /*********************************
 Added for quotes section
 *********************************/
+.quote-header {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    border-radius: 0;
+    top: 0px;
+	background: #fff;
+	
+}
+
+.quote-header .navbar {
+	margin-bottom: 20px;
+}
 
 .full-width {
 	width: 100%;
@@ -1524,4 +1537,60 @@ Added for quotes section
 .pull-left {
 	float: left;
 	margin-left: 0px;
+}
+
+.down40 {
+	margin-top: 40px;
+}
+
+.down60 {
+	margin-top: 60px;
+}
+
+.input-group-btn .btn {
+	background-color: #005f8d;
+	color: #fff;
+}
+
+.alert-warning {
+	font-size: 11px;
+    padding: 5px;
+}
+
+.alert-danger {
+	font-size: 11px;
+    padding: 5px;
+}
+
+.input-group {
+    text-align: center;
+}
+
+.input-number {
+    width: 60px;
+	padding: 5px;
+	text-align: center;
+}
+
+select.full-width {
+    padding: 8px;
+}
+
+.subtotal {
+    font-size: 20px;
+    margin-top: 3px;
+    float: right;
+}
+
+.subtotal-negative {
+    font-size: 20px;
+    margin-top: 3px;
+	float: right;
+	color: red;
+}
+
+section.quote {
+    font-size: 25px;
+	font-weight: 700;
+	margin-top: 20px;
 }
