@@ -1,5 +1,7 @@
 <?php
 
+
+var_dump($_POST);die;
 // creating a new quote
 if(isset($_POST["create"])) {
 

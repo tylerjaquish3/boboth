@@ -20,14 +20,14 @@
 	<!--[if lte IE 8]>
 			<script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
 		<![endif]-->
-	<link rel="shortcut icon" href="../images/logo.ico" type="image/png">
-	<link rel="stylesheet" href="../css/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="../css/isotope.css" media="screen" />
-	<link href="../css/animate.css" rel="stylesheet" media="screen">
+	<link rel="shortcut icon" href="/images/logo.ico" type="image/png">
+	<link rel="stylesheet" href="/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/isotope.css" media="screen" />
+	<link href="/css/animate.css" rel="stylesheet" media="screen">
 	<!-- Font Awesome -->
-	<link href="../font/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="../css/styles.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
-	<link rel="stylesheet" href="../css/responsive.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
+	<link href="/font/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/css/styles.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
+	<link rel="stylesheet" href="/css/responsive.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
 
 </head>
 
@@ -73,14 +73,14 @@
 									Patient Name:
 								</div>
 								<div class="col-xs-12 col-md-6">
-									<input type="text" id="patient-name" class="form-control">
+									<input type="text" name="patient-name" id="patient-name" class="form-control">
 								</div>
 
 								<div class="col-xs-12 col-md-6" class="pull-left">
 									Insurance:
 								</div>
 								<div class="col-xs-12 col-md-6">
-									<select id="insurance-select" class="full-width">
+									<select name="insurance" id="insurance-select" class="full-width">
 										<option>Select</option>
 										<option value="general">General</option>
 										<option value="vsp">VSP Only</option>
@@ -117,7 +117,10 @@
 						            </div>
 						        </div>
 						    </div>
-					    </div>
+						</div>
+						<div class="text-center">
+							<button id="save-button" class="btn btn-save" type="submit" style="display:none;">Save Quote</button>
+						</div>
 				    </div>
 				</section>
 			</form>
@@ -160,10 +163,12 @@
 			$('#general-form').hide();
 			$('#vsp-form').show();
 			$('#patient-signature').hide();
+			$('#save-button').show();
 		} else if (value == 'nbn') {
 			$('#vsp-form').hide();
 			$('#general-form').hide();
 			$('#nbn-form').show();
+			$('#save-button').show();
 		} else if (value == 'general') {
 			$('#nbn-form').hide();
 			$('#vsp-form').hide();
@@ -173,6 +178,7 @@
 			$('#choice-single-vision-form').hide();
 			$('#choice-multifocal-form').hide();
 			$('#signature-single-vision-form').hide();
+			$('#save-button').show();
 		}
 	});
 
@@ -225,10 +231,6 @@
 
         formData.append('img', base64img);
 
-        if (signaturePad.isEmpty()) {
-            addAlertToPage('error', 'Error', 'Please provide a signature', 5);
-        } else {
-
             $.ajax({
                 url: 'backend.php',
                 type: "POST",
@@ -250,7 +252,6 @@
                 contentType: false,
                 processData: false
             });
-        }
 
         e.preventDefault();
     });
