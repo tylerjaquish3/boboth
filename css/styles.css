@@ -1512,6 +1512,49 @@ table.details td{
     padding: 0;
 }
 
+body#login_screen {
+	background-color: #005f8d;
+}
+
+#login_screen form .login-fields input {
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #399dbe;
+    margin: 1em 0;
+    color: #f6f6f6;
+    font-size: 20px;
+    width: 100%;
+    font-family: "Lato";
+    font-weight: normal;
+    outline: none;
+}
+
+#login_screen #loginPage {
+    max-width: 420px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    width: 80%;
+    margin: auto;
+}
+
+#login_screen .title {
+    color: #f6f6f6;
+    font-size: 20px;
+    text-transform: lowercase;
+    font-weight: normal;
+    text-align: center;
+}
+
+#login_screen #error-message {
+	color: red;
+}
+
 
 /*********************************
 Added for quotes section
@@ -1593,4 +1636,9 @@ section.quote {
     font-size: 25px;
 	font-weight: 700;
 	margin-top: 20px;
+}
+
+.btn-save {
+    color: #fff;
+    background: #000;
 }
