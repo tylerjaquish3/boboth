@@ -1,4 +1,4 @@
-<div class="down40" id="general-form"> <!--style="display:none;"> -->
+<div class="down40" id="general-form" style="display:none;"> 
     <div class="row">
         <div class="col-xs-12 col-md-3">
             Type:
@@ -234,8 +234,6 @@
 <script src="../js/bootstrap.min.js" type="text/javascript"></script> 
 
 <script type="text/javascript">
-
-    var $form = $('');
 
     // This handles the inc/dec of all the number inputs
     $('.btn-number').click(function(e){
@@ -503,5 +501,7 @@
         var currentVal  = parseInt(input.val());
         updateSubtotal(currentVal, $(this), "edge-treatment");
     });
+
+
 
 </script>
