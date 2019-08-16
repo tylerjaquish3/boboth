@@ -91,10 +91,7 @@
 
 							<?php include 'general_form.php'; ?>
 							<?php include 'vsp_form.php'; ?>
-
-							<div class="row" id="nbn-form" style="display:none;">
-								nbn form
-							</div>
+							<?php include 'nbn_form.php'; ?>
 							 
 							<div class="row" id="patient-signature" style="display:none;">
 						        <div class="col-xs-12 col-md-6">
@@ -159,26 +156,30 @@
 	$('#insurance-select').click(function () {
 		value = $('#insurance-select').val();
 		if (value == 'vsp') {
-			$('#nbn-form').hide();
-			$('#general-form').hide();
-			$('#vsp-form').show();
-			$('#patient-signature').hide();
-			$('#save-button').show();
+			$('#nbn-form').hide("fold");
+			$('#general-form').hide("fold");
+			$('#patient-signature').hide("fold");
+			$('#vsp-form').show("fold");
+			$('#save-button').show("fold");
 		} else if (value == 'nbn') {
-			$('#vsp-form').hide();
-			$('#general-form').hide();
-			$('#nbn-form').show();
-			$('#save-button').show();
+			$('#vsp-form').hide("fold");
+			$('#general-form').hide("fold");
+			$('#signature-multifocal-form').hide("fold");
+			$('#choice-single-vision-form').hide("fold");
+			$('#choice-multifocal-form').hide("fold");
+			$('#signature-single-vision-form').hide("fold");
+			$('#nbn-form').show("fold");
+			$('#save-button').show("fold");
 		} else if (value == 'general') {
-			$('#nbn-form').hide();
-			$('#vsp-form').hide();
-			$('#general-form').show();
-			$('#patient-signature').show();
-			$('#signature-multifocal-form').hide();
-			$('#choice-single-vision-form').hide();
-			$('#choice-multifocal-form').hide();
-			$('#signature-single-vision-form').hide();
-			$('#save-button').show();
+			$('#nbn-form').hide("fold");
+			$('#vsp-form').hide("fold");
+			$('#signature-multifocal-form').hide("fold");
+			$('#choice-single-vision-form').hide("fold");
+			$('#choice-multifocal-form').hide("fold");
+			$('#signature-single-vision-form').hide("fold");
+			$('#general-form').show("fold");
+			$('#patient-signature').show("fold");
+			$('#save-button').show("fold");
 		}
 	});
 

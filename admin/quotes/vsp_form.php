@@ -4,7 +4,7 @@
         Coverage Plan:
     </div>
     <div class="col-xs-12 col-md-6">
-        <select id="coverage-plan-select" class="full-width">
+        <select id="vsp-coverage-plan-select" name="vsp-coverage-plan" class="full-width">
             <option>Select</option>
             <option value="signature-single-vision">Signature Single Vision Only</option>
             <option value="signature-multifocal">Signature Multifocal Only</option>
@@ -20,30 +20,42 @@
 <?php include 'choice_multifocal_form.php'; ?>
 
 <script type="text/javascript">
-	$('#coverage-plan-select').click(function () {
-		value = $('#coverage-plan-select').val();
+
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	
+	$('#vsp-coverage-plan-select').change(function () {
+		$("#script").html('');
+
+		value = $('#vsp-coverage-plan-select').val();
 		if (value == 'signature-single-vision') {
-			$('#signature-multifocal-form').hide();
-			$('#choice-single-vision-form').hide();
-			$('#choice-multifocal-form').hide();
-			$('#signature-single-vision-form').show();
+			$('#signature-multifocal-form').hide("fold");
+			$('#choice-single-vision-form').hide("fold");
+			$('#choice-multifocal-form').hide("fold");
+			$('#signature-single-vision-form').show("fold");
+			script.src = "js/ssv.js";
 		} else if (value == 'signature-multifocal') {
-			$('#signature-multifocal-form').show();
-			$('#choice-single-vision-form').hide();
-			$('#choice-multifocal-form').hide();
-			$('#signature-single-vision-form').hide();
+			$('#choice-single-vision-form').hide("fold");
+			$('#choice-multifocal-form').hide("fold");
+			$('#signature-single-vision-form').hide("fold");
+			$('#signature-multifocal-form').show("fold");
+			script.src = "js/smf.js";
 		} else if (value == 'choice-single-vision') {
-			$('#signature-multifocal-form').hide();
-			$('#choice-single-vision-form').show();
-			$('#choice-multifocal-form').hide();
-			$('#signature-single-vision-form').hide();
+			$('#signature-multifocal-form').hide("fold");
+			$('#choice-multifocal-form').hide("fold");
+			$('#signature-single-vision-form').hide("fold");
+			$('#choice-single-vision-form').show("fold");
+			script.src = "js/csv.js";
 		} else if (value == 'choice-multifocal') {
-			$('#signature-multifocal-form').hide();
-			$('#choice-single-vision-form').hide();
-			$('#choice-multifocal-form').show();
-			$('#signature-single-vision-form').hide();
+			$('#signature-multifocal-form').hide("fold");
+			$('#choice-single-vision-form').hide("fold");
+			$('#signature-single-vision-form').hide("fold");
+			$('#choice-multifocal-form').show("fold");
+			script.src = "js/cmf.js";
 		}
 
-		$('#patient-signature').show();
+		$("#script").append(script);
+
+		$('#patient-signature').show("fold");
 	});
 </script>
