@@ -158,9 +158,11 @@
 		if (value == 'vsp') {
 			$('#nbn-form').hide("fold");
 			$('#general-form').hide("fold");
+			$('#plan-12-form').hide("fold");
+			$('#plan-yk-form').hide("fold");
 			$('#patient-signature').hide("fold");
+			$('#save-button').hide("fold");
 			$('#vsp-form').show("fold");
-			$('#save-button').show("fold");
 		} else if (value == 'nbn') {
 			$('#vsp-form').hide("fold");
 			$('#general-form').hide("fold");
@@ -168,8 +170,9 @@
 			$('#choice-single-vision-form').hide("fold");
 			$('#choice-multifocal-form').hide("fold");
 			$('#signature-single-vision-form').hide("fold");
+			$('#patient-signature').hide("fold");
+			$('#save-button').hide("fold");
 			$('#nbn-form').show("fold");
-			$('#save-button').show("fold");
 		} else if (value == 'general') {
 			$('#nbn-form').hide("fold");
 			$('#vsp-form').hide("fold");
@@ -177,6 +180,8 @@
 			$('#choice-single-vision-form').hide("fold");
 			$('#choice-multifocal-form').hide("fold");
 			$('#signature-single-vision-form').hide("fold");
+			$('#plan-12-form').hide("fold");
+			$('#plan-yk-form').hide("fold");
 			$('#general-form').show("fold");
 			$('#patient-signature').show("fold");
 			$('#save-button').show("fold");

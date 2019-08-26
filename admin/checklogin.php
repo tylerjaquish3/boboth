@@ -16,14 +16,14 @@
 	$usernameTry = mysqli_real_escape_string($conn, $usernameTry);
 	$passwordTry = mysqli_real_escape_string($conn, $passwordTry);
 	
-	$sql = $conn->prepare("SELECT * FROM $tbl_name WHERE email= ? AND is_active = 1");
+	$sql = $conn->prepare("SELECT * FROM $tbl_name WHERE user_name = ? AND is_active = 1");
 	$sql->bind_param('s', $usernameTry);
 	$sql->execute();
 	$result = $sql->get_result();
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
 			$myuserid = $row['id'];
-			$myusername = $row['email'];
+			$myusername = $row['user_name'];
 			$mypassword = $row['password'];
 		}
 	}
