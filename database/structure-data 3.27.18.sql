@@ -7,10 +7,10 @@
 -- Server version: 5.6.37
 -- PHP Version: 4.4.9
 -- 
--- Database: `bobothvisionclinic`
+-- Database: `boboth`
 -- 
-CREATE DATABASE `bobothvisionclinic` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `bobothvisionclinic`;
+-- CREATE DATABASE `boboth` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `boboth`;
 
 -- --------------------------------------------------------
 
@@ -19,20 +19,21 @@ USE `bobothvisionclinic`;
 -- 
 
 CREATE TABLE `admin` (
-  `admin_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `user_name` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
-  PRIMARY KEY (`admin_id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- 
 -- Dumping data for table `admin`
 -- 
 
-INSERT INTO `admin` VALUES (1, 'fred', '@Bobothvision1');
-INSERT INTO `admin` VALUES (2, 'everett', '@Bobothvision1');
-INSERT INTO `admin` VALUES (3, 'cole', '@Bobothvision1');
-INSERT INTO `admin` VALUES (4, 'maria', '@Bobothvision1');
+INSERT INTO `admin` VALUES (1, 'fred@boboth.com', '@Bobothvision1');
+INSERT INTO `admin` VALUES (2, 'everett@boboth.com', '@Bobothvision1');
+INSERT INTO `admin` VALUES (3, 'cole@boboth.com', '@Bobothvision1');
+INSERT INTO `admin` VALUES (4, 'maria@boboth.com', '@Bobothvision1');
+INSERT INTO `admin` VALUES (5, 'tyler@boboth.com', '@Bobothvision1');
 
 -- --------------------------------------------------------
 
@@ -41,7 +42,7 @@ INSERT INTO `admin` VALUES (4, 'maria', '@Bobothvision1');
 -- 
 
 CREATE TABLE `reviews` (
-  `review_id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_name` varchar(100) DEFAULT NULL,
   `entry_datetime` datetime NOT NULL,
   `appointments` int(11) NOT NULL,
@@ -53,7 +54,7 @@ CREATE TABLE `reviews` (
   `likelihood` int(11) NOT NULL,
   `comments` varchar(1000) DEFAULT NULL,
   `approved` int(11) NOT NULL,
-  PRIMARY KEY (`review_id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
 
 -- 

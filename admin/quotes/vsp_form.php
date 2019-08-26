@@ -57,5 +57,6 @@
 		$("#script").append(script);
 
 		$('#patient-signature').show("fold");
+		$('#save-button').show("fold");
 	});
 </script>
