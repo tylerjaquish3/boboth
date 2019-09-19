@@ -20,7 +20,11 @@
 	<!--[if lte IE 8]>
 			<script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
 		<![endif]-->
-	<link rel="shortcut icon" href="images/logo.ico" type="image/png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
 	<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
@@ -46,8 +50,16 @@
 		<div class="container">
 			<nav class="navbar navbar-inverse" role="navigation">
 				<div class="navbar-header">
-					<button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-					<a href="#" class="navbar-brand scroll-top logo  animated bounceInLeft"><b>Boboth Vision Clinic</b></a> 
+					<button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> 
+						<span class="sr-only">Toggle navigation</span> 
+						<span class="icon-bar"></span> 
+						<span class="icon-bar"></span> 
+						<span class="icon-bar"></span> 
+					</button>
+					<a href="#" class="navbar-brand scroll-top logo animated bounceInLeft">
+						<img class="desktop-only" src="images/logo.png" width="50">
+						<b>Boboth Vision Clinic</b>
+					</a> 
 				</div>
 				<div id="main-nav" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav" id="mainNav">
@@ -138,14 +150,12 @@
 			<div class="heading">
 				<h2>Testimonials</h2>
 				<p>Customer satisfaction is our number one priority. We take pride in providing the best eye care. 
-				That is why we appreciate when our patients take the time to tell us what makes us extraordinary, and what needs improvement.</p>
-
-				<!-- <p><a href="review.html" style="color:white"><i class="fa fa-clipboard"></i> Leave Us a Review!</a></p> -->
+				That is why we appreciate when our patients take the time to tell us what makes us extraordinary and what needs improvement.</p>
 
 				<div id="text-carousel" class="carousel slide" data-ride="carousel">
 				    <!-- Wrapper for slides -->
 				    <div class="row">
-				        <div class="col-md-offset-3 col-md-6 col-xs-12" id="testimonial-div">
+				        <div class="col-md-offset-2 col-md-8 col-xs-12" id="testimonial-div">
 				            <div class="carousel-inner">
 				                <div class="item active">
 				                    <div class="carousel-content">
@@ -198,25 +208,10 @@
 	<section id="appointment" class="page-section">
 		<div class="container">
 		    <div class="heading text-center"> 
-		        <h2>Requests</h2>
-		        <p>We strive to interact with our patients efficiently through our online forms. Make a request using the forms provided, and we will contact you soon.
+		        <!-- Request Contact Lenses -->
+				<h2>To request contact lenses, click the button below and complete the form.</h2> <p>(Note: A current prescription is required.)</p>
+				<a href="http://boboth.myclstore.com" class="myButton">Order Contact Lenses</a>
 		    </div>
-			
-		    <div class="section group">
-				<div class="col span_1_of_2"> 
-					<img src="images/lab-photo-remake.jpg" width="600" alt="Office">
-				</div>
-		        <div class="col span_2_of_2">
-					<!-- Request Appointment -->
-					<p>To request an appointment, <br />click the button below and complete the form.</p>
-					
-					<a href="http://bobothvision.lensferry.com/#/book-appointment/?locationId=5937248bf00c4b00f59debbb" class="myButton">Request Appointment</a><br /><br />
-				
-					<!-- Request Contact Lenses -->
-					<p>To request contact lenses, <br />click the button below and complete the form. <br />(Note: A current prescription is required.)</p>
-					<a href="http://boboth.myclstore.com" class="myButton">Order Contact Lenses</a>
-			    </div>
-			</div>
 		</div>
 	</section>
 
@@ -235,7 +230,7 @@
 							<tbody>
 							<tr>
 								<th scope="row">Address</th>
-								<td>403 N. Euclid Rd<br />
+								<td>1023 W. Wine Country Rd<br />
 									Grandview, WA 98930</td>
 							</tr>
 							<tr>
@@ -252,7 +247,7 @@
 							</tr>
 							<tr>
 								<td colspan="2">
-									<a href="https://facebook.com/bobothvision"><i class="fa fa-facebook-square"></i> Like Us On Facebook</a>
+									<h3><a href="https://facebook.com/bobothvision"><i class="fa fa-facebook-square"></i> Like Us On Facebook</a></h3>
 								</th>
 							</tbody>
 						</table>
@@ -291,7 +286,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-2 col-md-offset-2 col-xs-12 text-center">
+					<div class="col-md-4 col-xs-12 text-center">
 						<b>Monday - Wednesday</b> <br />
 						8:30 am - 5:30 pm
 					</div>
@@ -299,7 +294,7 @@
 						<b>Thursday</b><br />
 						8:00 am - 5:00 pm
 					</div>
-					<div class="col-md-2 col-xs-12 text-center">
+					<div class="col-md-4 col-xs-12 text-center">
 						<b>Friday</b><br />
 						7:00 am - 12:00 pm
 					</div>
@@ -309,7 +304,7 @@
 	</section>
 
 	<section class="no-margin">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22067.429505342512!2d-119.93283876136263!3d46.26158427911841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5498185d7f08d20d%3A0x6fc7617b1d54f622!2s403+N+Euclid+Rd%2C+Grandview%2C+WA+98930!5e0!3m2!1sen!2sus!4v1522297640086" width="100%" height="300" frameborder="0"></iframe>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2758.3106441077634!2d-119.91960998441557!3d46.26393047911856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54981867a8322fb5%3A0xc6e2ae04fbe6d6d5!2s1023%20Wine%20Country%20Rd%2C%20Grandview%2C%20WA%2098930!5e0!3m2!1sen!2sus!4v1568907156710!5m2!1sen!2sus" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 	</section>
 
 	<!-- footer -->
