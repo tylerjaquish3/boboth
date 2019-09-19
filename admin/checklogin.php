@@ -9,6 +9,10 @@
 	// username and password sent from form 
 	$usernameTry=$_POST['myusername']; 
 	$passwordTry=$_POST['mypassword'];
+
+	//this is how you create a new password: enter it as first parameter, then try to login. 
+	//it will display the hash for the password you entered.
+	// var_dump(password_hash('password', PASSWORD_BCRYPT));die;
 	
 	// To protect MySQL injection
 	$usernameTry = htmlspecialchars($usernameTry);
@@ -30,10 +34,6 @@
 
 	// Mysql_num_row is counting table row
 	$count = mysqli_num_rows($result);
-
-	//this is how you create a new password: enter it as first parameter, then try to login. 
-	//it will display the hash for the password you entered.
-	// var_dump(password_hash('abcd', PASSWORD_BCRYPT));die;
 
 	// If result matched $usernameTry, there was 1 result
 	if ($count == 1){
