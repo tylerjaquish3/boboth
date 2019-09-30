@@ -11,13 +11,23 @@
         margin-top: 22px;
     }
 
-    /* .navbar-inverse .navbar-nav > li > a {
-        color: #858585;
-    } */
-
     .header .navbar {
         background: #fff;
         opacity: 0.8;
+    }
+
+    section#banner {
+        margin-top: 65px;
+        margin-bottom: -46px;
+    }
+
+    section#banner img {
+        width: 100px;
+    }
+
+    section#banner h3 {
+        font-size: 16px;
+        margin-top: 0px;
     }
 }
 
@@ -32,7 +42,30 @@
         min-height: 120px;
         margin-top: 40px;
     }
+
+    .navbar-brand b {
+        font-size: 55%;
+    }
+
+    .header .navbar-brand {
+        padding-left: 0;
+    }
+    .navbar-nav {
+        float: right;
+    }
+    .navbar-inverse .navbar-nav > li > a {
+        font-size: 1em;
+        padding: 6px 0px !important;
+        border-radius: 5px;
+        margin: 19px 10px;
+    }
 }
 
 @media only screen and (max-width: 992px) {
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        float: right;
+    }
 }

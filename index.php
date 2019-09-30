@@ -27,10 +27,10 @@
 
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
-	<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+	<!-- <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" /> -->
 	<link href="css/animate.css" rel="stylesheet" media="screen">
 	<!-- Owl Carousel Assets -->
-	<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
+	<!-- <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet"> -->
 	<!-- Font Awesome -->
 	<link href="font/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/styles.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
@@ -75,6 +75,22 @@
 	</header>
 	
 	<div id="#top"></div>
+
+	<!-- temporary banner. also remove the comment around .services-parlex padding-top in styles.css -->
+	<section id="banner" class="page-section">
+		<div class="container">
+		    <div class="heading"> 
+				<div class="row">
+					<div class="col-xs-4 text-right">
+						<img src="/images/moved.png" width="200">
+					</div>
+					<div class="col-xs-8 text-left">
+						<h3>Come see us at our new location: 1023 W. Wine Country Rd, Grandview</h3>
+					</div>
+				</div>
+		    </div>
+		</div>
+	</section>
 
 	<!-- Services -->
 	<section id="services" class="services-parlex">

@@ -210,9 +210,7 @@ a:hover {
 .navbar-inverse .navbar-toggle {
 	background-color: #005f8d;
 }
-.navbar-inverse .navbar-toggle .icon-bar {
-	/*background-color: #005f8d;*/
-}
+
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
 	background: #005f8d;
 }
@@ -225,8 +223,7 @@ a:hover {
 .navbar-inverse .navbar-toggle:hover .icon-bar {
 	background: #fff;
 }
-.navbar-toggle {
-}
+
 .hero-text h1 {
 	color: #fff !important;
 }
@@ -347,8 +344,7 @@ a:hover {
 	background: none;
 	border-radius: 0px;
 }
-.navbar-inverse .navbar-nav > .active {
-}
+
 .header .navbar-nav > li > a {
 	padding: 25px 18px;
 }
@@ -545,7 +541,7 @@ img, video, embed, object {
     -------------------------------------------------*/
 #aboutUs {
 	background: #fff;
-	padding-top: 35px;
+	padding-top: 50px;
 	padding-bottom: 25px;
 	overflow: hidden;
 }
@@ -614,13 +610,10 @@ img, video, embed, object {
 }
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
 @media only screen and (max-width: 480px) {
 	.col { margin: 1% 0 1% 0%;}
 	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
 }
-
-
 
 /* Services
     -------------------------------------------------*/
@@ -649,41 +642,11 @@ img, video, embed, object {
 	font-size: 4.5em;
 	top: 36px;
 }
-/* Team
-    ---------------------------------------------------*/
-.team-member {
-	margin-bottom: 15px;
+
+#contactUs .container {
+	margin-top: 30px;
 }
-.member-img {
-	overflow: hidden;
-	padding: 5px;
-}
-.team-member .member-img img {
-	max-width: 250px;
-	margin: 0 auto;
-}
-.team-member h4 {
-	font-size: 19px;
-	line-height: 32px;
-	margin: 10px 0 0;
-	text-align: center;
-}
-.team-member .pos {
-	display: block;
-	margin: 0;
-	text-align: center;
-}
-.team-member .contact a {
-	padding: 0 8px;
-}
-.team-socials a {
-	background: white;
-	padding: 7px 0;
-	margin: 2px;
-}
-#contactUs {
-/*background: #005f8d;*/;
-}
+
 #contactUs .btn {
 	border-radius: 0px !important;
 	background: rgba(0, 0, 0, 0.32);
@@ -694,30 +657,11 @@ img, video, embed, object {
     /*border-bottom: 1px solid #dadde2;*/
 	padding: 5px 15px;
 }
-.team-member {
-	padding-top: 5px;
+
+#services .container {
+	margin-top: 30px;
 }
-.team-socials {
-	margin: 15px 0;
-	opacity: 0;
-	text-align: center;
-}
-.team-member:hover .team-socials {
-	opacity: 1;
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-ms-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	transition: all 1s ease;
-}
-.team-socials i {
-	width: 35px;
-	height: 35px;
-	position: relative;
-	display: inline-block;
-	text-align: center;
-	font-size: 18px;
-}
+
 #services h2 {
 	color: #fff;
 }
@@ -725,6 +669,7 @@ img, video, embed, object {
 #work {
 	background: #005f8d;
 	color: #fff;
+	padding-top: 50px;
 }
 #work h2 {
 	color: #fff !important;
@@ -886,31 +831,21 @@ body {
 .pageSection:nth-child(odd) {
 	background: #eeeeee;
 }
-.socialIcons li {
-	list-style: none;
-	display: inline;
-	margin-right: 6px;
-}
+
 footer {
 	border-top: 1px solid #e5e5e5;
 	padding: 45px 0;
 	background: #fff;
 }
-.social a:hover {
-	color: #000;
-}
-.social a {
-	font-size: 32px;
-	margin: 0 10px;
-	color: #005f8d;
-	background: rgba(255, 255, 255, 0.44);
-	padding: 0px 10px;
-}
+
 .contact ul li {
 	margin-bottom: 10px;
 }
 .contact ul li i {
 	margin-right: 15px;
+}
+#appointment {
+	padding-top: 50px;
 }
 /*Clients*/
 .clients #owl-demo .item {
@@ -937,21 +872,6 @@ footer {
 .portfolio-item img:hover {
 	width: 110%;
 	height: 110%;
-}
-
-@media (min-width: 768px) {
-.header .navbar-brand {
-	padding-left: 0;
-}
-.navbar-nav {
-	float: right;
-}
-.navbar-inverse .navbar-nav > li > a {
-	font-size: 1.1em;
-	padding: 6px 0px !important;
-	border-radius: 5px;
-	margin: 19px 10px;
-}
 }
 
 @media (max-width: 768px) {
@@ -987,9 +907,7 @@ a.arrow-link {
 	width: 67%;
 	top: 122px;
 }
-.team-member .member-img img {
-	max-width: 100%;
-}
+
 .da-slider {
 	height: 380px;
 	width: 100%;
@@ -999,6 +917,7 @@ a.arrow-link {
 .header .navbar-nav > li > a {
 	padding: 25px 12px;
 }
+
 .portfolio-item img {
 	text-decoration: none;
 	display: block;
@@ -1074,19 +993,6 @@ a.arrow-link {
 	height: 28px;
 	line-height: 28px;
 	width: 26px;
-}
-.team-socials a {
-	background: white;
-	padding: 1px 0;
-	margin: 2px;
-}
-.team-socials i {
-	width: 19px;
-	height: 19px;
-	position: relative;
-	display: inline-block;
-	text-align: center;
-	font-size: 16px;
 }
 .page-section {
 	padding: 0px;
@@ -1180,7 +1086,7 @@ nav#filter li {
 	color: #FDFDFD;
 }
 .services-parlex {
-	padding-top: 75px;
+	/* padding-top: 75px; */
 	background-image: url('../images/OutdoorPhoto5.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -1678,4 +1584,13 @@ input:checked + .slider:before {
 	-webkit-transform: translateX(26px);
 	-ms-transform: translateX(26px);
 	transform: translateX(26px);
+}
+
+section#banner {
+    margin-top: 35px;
+    margin-bottom: -60px;
+}
+
+section#banner h3 {
+	margin-top: 50px;
 }
