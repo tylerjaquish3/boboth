@@ -2,9 +2,9 @@
 
 if(isset($_POST['email'])) {
  
-    // $email_to = "doctors@bobothvision.com";
-    $email_subject = "New message from bobothvision.com";
-    $email_to = "tylerjaquish@gmail.com";
+	$email_subject = "New message from bobothvision.com";
+	$email_to = "doctors@bobothvision.com";
+    // $email_to = "tylerjaquish@gmail.com";
 
     function died($error) {
         // your error code can go here
@@ -20,11 +20,17 @@ if(isset($_POST['email'])) {
         !isset($_POST['email']) ||
         !isset($_POST['message'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');       
-    }
- 
+	}
+	
     $name = $_POST['name']; // required
     $email_from = $_POST['email']; // required
-    $telephone = $_POST['phone']; // not required
+	$telephone = $_POST['phone']; // not required
+	$appt_request = isset($_POST['request-appt']); // not required
+	if ($appt_request) {
+		$appt_type = $_POST['appointment-type']; // not required
+		$appt_date = $_POST['requested-date']; // not required
+		$appt_time = $_POST['requested-time']; // not required
+	}
     $comments = $_POST['message']; // required
  
     $error_message = "";
@@ -53,9 +59,15 @@ if(isset($_POST['email'])) {
  
     $email_message .= "Name: ".clean_string($name)."\n";
     $email_message .= "Email: ".clean_string($email_from)."\n";
-    $email_message .= "Telephone: ".clean_string($telephone)."\n";
+	$email_message .= "Telephone: ".clean_string($telephone)."\n";
+	if ($appt_request) {
+		$email_message .= "Appointment Requested\n";
+		$email_message .= "Appointment Type: ".clean_string($appt_type)."\n";
+		$email_message .= "Requested Date: ".clean_string($appt_date)."\n";
+		$email_message .= "Requested Time: ".clean_string($appt_time)."\n";
+	}
     $email_message .= "Comments: ".clean_string($comments)."\n";
- 
+
 	// create email headers
 	$headers = 'From: '.$email_from."\r\n".
 	'Reply-To: '.$email_from."\r\n" .
