@@ -64,9 +64,9 @@
 				<div id="main-nav" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav" id="mainNav">
 						<li class="active" id="firstLink"><a href="#services" class="scroll-link">Services</a></li>
+						<li><a href="#glasses" class="scroll-link">Glasses</a></li>
 						<li><a href="#aboutUs" class="scroll-link">Doctors</a></li>
 						<li><a href="#work" class="scroll-link">Testimonials</a></li>
-						<li><a href="#appointment" class="scroll-link">Requests</a></li>
 						<li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
 					</ul>
 				</div>
@@ -80,14 +80,19 @@
 	<section id="banner" class="page-section">
 		<div class="container">
 		    <div class="heading"> 
+				<br />
+				<hr />
 				<div class="row">
-					<div class="col-xs-4 text-right">
-						<img src="/images/moved.png" width="200">
-					</div>
-					<div class="col-xs-8 text-left">
-						<h3>Come see us at our new location: 1023 W. Wine Country Rd, Grandview</h3>
+					<div class="col-xs-12">
+						<strong>Notice:</strong> We are requiring that patients come in by appointment only. If you have glasses or contacts to pick up please call us to make arrangements. If you have an appointment, we ask that you call or text when you are in the parking lot to check-in. We are requiring patients wait in their car instead of the waiting room. Once we have completed your check-in, we will call or text you and greet you at the door and take your temperature. Unfortunately, we will have to turn away anyone who has a temperature of 100.4 F or higher per CDC definition of a fever. All patients must bring their own masks and wear them at all times indoors. We are allowing only two people indoors per eye exam. We ask that you maintain social distancing of 6 ft or more. <br /><br />
+
+						We have changed our protocols in order to keep our patients and staff safe, but that safety is reliant on the compliance of those who walk through our doors. We appreciate your understanding and we are excited be able to care for you again.
+
+						<a href="/PatientLetter.pdf">Patient Letter</a>
 					</div>
 				</div>
+				<hr />
+				
 		    </div>
 		</div>
 	</section>
@@ -97,7 +102,6 @@
 		<div class="parlex-back">
 			<div class="container">
 				<div class="heading text-center"> 
-					<!-- Heading -->
 					<h2>Our Services</h2>
 					<p>In our mission to provide the best eye care possible, we are committed to educating our patients and providing personalized eye care to the people 
 					of the Lower Yakima Valley. At Boboth Vision Clinic, you will find eye care professionals who genuinely care about your health and vision. 
@@ -105,44 +109,45 @@
 				</div>
 				<div class="row"> 
 					<div class="col-md-1"></div>
-					<!-- item -->
-					<div class="col-md-2 text-center c1" onclick="location.href='http://bobothvision.lensferry.com/#/book-appointment/?locationId=5937248bf00c4b00f59debbb';" style="cursor: pointer;"> 
+					<div class="col-md-2 text-center c1" onclick="requestAppointment(0);" style="cursor: pointer;"> 
 						<i class="fa fa-life-ring fa-2x circle"></i>
 						<h3><span class="id-color">Eye Health Exams</span></h3>
 						<p style="color: #fff">Regularly scheduled exams are an important part of preventive health care and maintaining good vision.</p>
 					</div>
-					<!-- end: --> 
-					<!-- item -->
-					<div class="col-md-2 text-center c2" onclick="location.href='http://bobothvision.lensferry.com/#/book-appointment/?locationId=5937248bf00c4b00f59debbb';" style="cursor: pointer;"> 
+					<div class="col-md-2 text-center c2" onclick="requestAppointment(1);" style="cursor: pointer;"> 
 						<i class="fa fa-plus-square fa-2x circle"></i>
 						<h3><span class="id-color">Pre-Surgical Evals</span></h3>
 						<p style="color: #fff">Before undergoing cataract or LASIK surgery, we evaluate & prepare patients with thorough tests & explanation. </p>
 					</div>
-					<!-- end: --> 
-					<!-- item -->
-					<div class="col-md-2 text-center c1" onclick="location.href='http://bobothvision.lensferry.com/#/book-appointment/?locationId=5937248bf00c4b00f59debbb';" style="cursor: pointer;"> 
+					<div class="col-md-2 text-center c1" onclick="requestAppointment(2);" style="cursor: pointer;"> 
 						<i class="fa fa-eye fa-2x circle"></i>
 						<h3><span class="id-color">Contact Lens Fittings</span></h3>
 						<p style="color: #fff">A fitting appointment involves both a consultation and measurement to ensure the right fit for your lenses.</p>
 					</div>
-					<!-- end: --> 
-					<!-- item -->
-					<div class="col-md-2 text-center c2" onclick="location.href='http://bobothvision.lensferry.com/#/book-appointment/?locationId=5937248bf00c4b00f59debbb';" style="cursor: pointer;"> 
+					<div class="col-md-2 text-center c2" onclick="requestAppointment(3);" style="cursor: pointer;"> 
 						<i class="fa fa-child fa-2x circle"></i>
 						<h3><span class="id-color">Family Eye Care</span></h3>
 						<p style="color: #fff">Our clinic provides eye exams for the whole family - from your children to your grandparents.</p><br />
 					</div>
-					<!-- end:--> 
-					<!-- item -->
-					<div class="col-md-2 text-center c1" onclick="location.href='http://bobothvision.lensferry.com/#/book-appointment/?locationId=5937248bf00c4b00f59debbb';" style="cursor: pointer;"> 
+					<div class="col-md-2 text-center c1" onclick="requestAppointment(4);" style="cursor: pointer;"> 
 						<i class="fa fa-stethoscope fa-2x circle"></i>
 						<h3><span class="id-color">Diabetic Eye Exam</span></h3>
 						<p style="color: #fff">Annual dilated eye exams are critical to fighting the harmful effects that diabetes can have on your eyes.</p>
 					</div>
-					<!-- end:--> 
 				</div>
 			</div>
 			<br /><br /><br />
+		</div>
+	</section>
+
+	<section id="glasses" class="page-section page">
+		<div class="container">
+			<div class="row" style="margin-top: 20px;">
+				<div class="col-xs-12 text-center">
+					<button class="myButton" href="https://www.framesdata.com/mfg/BOBOTH-VISION-CLINIC">Try on our glasses here, VIRTUALLY!</button><br />
+					(These are all the frames we have access to order. We are happy to order frames so you can try them on at our clinic. Have any questions or want to order some glasses? You can call us at <a href="tel:5098822650">509.882.2650</a>, or email us at <a href="mailto:doctors@bobothvision.com">doctors@bobothvision.com</a>, or send us a message on <a href="https://facebook.com/bobothvision">Facebook</a>.)
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -202,7 +207,88 @@
 				                    <div class="carousel-content">
 			                            <p><i class="fa fa-quote-left"></i> Loved the environment and the friendly staff. Definitely coming back and recommending this palace to my friends and family! <i class="fa fa-quote-right"></i></p>
 				                    </div>
-				                </div>						                
+								</div>	
+
+								<!-- ==========================NEW ONES============================= -->
+								<div class="item">
+									<div class="carousel-content">
+										<p><i class="fa fa-quote-left"></i> 
+											I love going here to have my eyes checked. They are very nice and you are in and out. If you have questions, they will sit and talk to you.<i class="fa fa-quote-right"></i></p>
+									</div>
+								</div>
+								<div class="item">
+									<div class="carousel-content">
+										<p><i class="fa fa-quote-left"></i> 
+											Staff was very friendly, the waiting area was set up according to our guidelines and the rooms were clean. The doctor was very nice and answered all my questions and concerns.<i class="fa fa-quote-right"></i></p>
+									</div>
+								</div>
+								<div class="item">
+									<div class="carousel-content">
+										<p><i class="fa fa-quote-left"></i> 
+											Great location, friendly staff, state of the art equipment, new building, and top line Doctors!<i class="fa fa-quote-right"></i></p>
+									</div>
+								</div>
+								<div class="item">
+									<div class="carousel-content">
+										<p><i class="fa fa-quote-left"></i> 
+											The dr. Was very good and nice.<i class="fa fa-quote-right"></i></p>
+									</div>
+								</div>
+								<div class="item">
+									<div class="carousel-content">
+										<p><i class="fa fa-quote-left"></i> 
+											I enjoy Maria M. She is always so helpful and informative. I have been very pleased and like going to Boboth. Thank you<i class="fa fa-quote-right"></i></p>
+									</div>
+								</div>
+								<div class="item">
+									<div class="carousel-content">
+										<p><i class="fa fa-quote-left"></i> 
+											Nice, new facility. Very clean. Staff is so friendly and helpful. Dr. Everett was knowledgeable and up on the latest updates for contact lenses.<i class="fa fa-quote-right"></i></p>
+									</div>
+								</div>
+								<div class="item">
+									<div class="carousel-content">
+										<p><i class="fa fa-quote-left"></i> 
+											It was nice to walk into a friendly atmosphere. The Eye Doctor listened to my concerns and answered all my questions.<i class="fa fa-quote-right"></i></p>
+									</div>
+								</div>
+								<div class="item">
+									<div class="carousel-content">
+										<p><i class="fa fa-quote-left"></i> 
+											Was great to be in a new building a lot bigger not feeling so crowded. And of course the help was excellent as always. And Maria is a fantastic worker. Thank You All<i class="fa fa-quote-right"></i></p>
+									</div>
+								</div>
+								<div class="item">
+									<div class="carousel-content">
+										<p><i class="fa fa-quote-left"></i> 
+											The Doctor and staff are always so personable and kind, making visits very comfortable. The new office is incredible and is very accommodating for the current state of social distancing.<i class="fa fa-quote-right"></i></p>
+									</div>
+								</div>
+								<div class="item">
+									<div class="carousel-content">
+										<p><i class="fa fa-quote-left"></i> 
+											Dr. Everett is about the friendliest person you will meet. He greets all his patients as though he's been looking forward to seeing them all day. In fact, the entire staff is patient and friendly. This is a very professional family-run practice.<i class="fa fa-quote-right"></i></p>
+									</div>
+								</div>
+								<div class="item">
+									<div class="carousel-content">
+										<p><i class="fa fa-quote-left"></i> 
+											Excellent doctors and I've been going to the clinic since I was a kid and I have never had no issues with the doctor's office all the doctors who work here are very cool and work with you pretty well cool cool.😃and the staff treats you really well with respect and helps you out if you need it.<i class="fa fa-quote-right"></i></p>
+									</div>
+								</div>
+								<div class="item">
+									<div class="carousel-content">
+										<p><i class="fa fa-quote-left"></i> 
+											Great communication. Detailed explanations of what we were doing and why. Super friendly and helpful!<i class="fa fa-quote-right"></i></p>
+									</div>
+								</div>
+								<div class="item">
+									<div class="carousel-content">
+										<p><i class="fa fa-quote-left"></i> 
+											Friendly knowledgeable staff<i class="fa fa-quote-right"></i></p>
+									</div>
+								</div>
+				                
 				            </div>
 				        </div>
 				    </div>
@@ -221,15 +307,14 @@
 	</section>
 
 	<!-- Appointment -->
-	<section id="appointment" class="page-section">
+	<!--<section id="appointment" class="page-section">
 		<div class="container">
 		    <div class="heading text-center"> 
-		        <!-- Request Contact Lenses -->
 				<h2>To request contact lenses, click the button below and complete the form.</h2> <p>(Note: A current prescription is required.)</p>
 				<a href="http://boboth.myclstore.com" class="myButton">Order Contact Lenses</a>
 		    </div>
 		</div>
-	</section>
+	</section>-->
 
 	<!-- Contact Us -->
 	<section id="contactUs" class="contact-parlex">
@@ -281,9 +366,31 @@
 								<div class="coll-3">
 									<input name="phone" type="tel" value="" placeholder="Phone:"><br>
 								</div>
+								<div class="coll-4">
+									<input type="checkbox" name="request-appt" id="request_appt_check">Request Appointment
+								</div>
+								<div id="appt_fields" style="display: none;">
+									<div class="">
+										Appointment Type:
+										<select name="appointment-type" id="appt_type">
+											<option value="Eye Health Exam">Eye Health Exam</option>
+											<option value="Pre-Surgical Evaluation">Pre-Surgical Evaluation</option>
+											<option value="Contact Lens Fitting">Contact Lens Fitting</option>
+											<option value="Family Eye Care">Family Eye Care</option>
+											<option value="Diabetic Eye Exam">Diabetic Eye Exam</option>
+											<option value="Other">Other</option>
+										</select><br>
+									</div>
+									<div>
+										<input name="requested-date" type="text" placeholder="Requested Date:"><br>
+									</div>
+									<div>
+										<input name="requested-time" type="text" placeholder="Requested Time:"><br>
+									</div>
+								</div>
 								<div class="clear"></div>
 								<div>
-									<textarea name="message" required placeholder="Message:"></textarea><br>
+									<textarea name="message" required placeholder="Comments:"></textarea><br>
 								</div>
 								
 								<input type="hidden" name="msg-type" value="generic">
@@ -356,5 +463,18 @@
 	if ("<?php echo $showMessage; ?>") {
 		$('#success').modal('show');
 	}
+
+	function requestAppointment(apptType)
+	{
+		location.href = '#contactUs';
+		$('#request_appt_check').prop('checked', true);
+		$('#appt_type option:eq('+apptType+')').prop('selected', true);
+		$('#appt_fields').show();
+	}
+
+	$('#request_appt_check').change(function () {
+		$('#appt_fields').toggle();
+	});
+
 </script>
 </html>
