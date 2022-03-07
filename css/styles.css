@@ -999,7 +999,7 @@ nav#filter li {
 	color: #FDFDFD;
 }
 .services-parlex {
-	/* padding-top: 75px; */
+	padding-top: 75px;
 	background-image: url('../images/new-office.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -1264,6 +1264,8 @@ table.details td{
 .fa-quote-right {
 	margin-left: 10px;
 }
+
+.grecaptcha-badge { opacity:0; }
 
 .contact-form input, textarea {
     padding: 9px 14px 8px;

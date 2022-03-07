@@ -76,27 +76,6 @@
 	
 	<div id="#top"></div>
 
-	<!-- temporary banner. also remove the comment around .services-parlex padding-top in styles.css -->
-	<section id="banner" class="page-section">
-		<div class="container">
-		    <div class="heading"> 
-				<br />
-				<hr />
-				<div class="row">
-					<div class="col-xs-12">
-						<strong>Notice:</strong> We are requiring that patients come in by appointment only. If you have glasses or contacts to pick up please call us to make arrangements. If you have an appointment, we ask that you call or text when you are in the parking lot to check-in. We are requiring patients wait in their car instead of the waiting room. Once we have completed your check-in, we will call or text you and greet you at the door and take your temperature. Unfortunately, we will have to turn away anyone who has a temperature of 100.4 F or higher per CDC definition of a fever. All patients must bring their own masks and wear them at all times indoors. We are allowing only two people indoors per eye exam. We ask that you maintain social distancing of 6 ft or more. <br /><br />
-
-						We have changed our protocols in order to keep our patients and staff safe, but that safety is reliant on the compliance of those who walk through our doors. We appreciate your understanding and we are excited be able to care for you again.
-
-						<a href="/PatientLetter.pdf">Patient Letter</a>
-					</div>
-				</div>
-				<hr />
-				
-		    </div>
-		</div>
-	</section>
-
 	<!-- Services -->
 	<section id="services" class="services-parlex">
 		<div class="parlex-back">
@@ -142,11 +121,20 @@
 
 	<section id="glasses" class="page-section page">
 		<div class="container">
+			<div class="row text-center">
+				<div class="col-xs-12 col-md-3 col-md-push-3">
+					<img src="/images/2B674052.jpg">
+				</div>
+				<div class="col-xs-12 col-md-3 col-md-push-3">
+					<div class="hidden-xs" style="margin-top: 40px;"></div>
+					<button class="myButton" onclick="window.location = 'https://www.framesdata.com/mfg/BOBOTH-VISION-CLINIC';">Try on our glasses here, VIRTUALLY!</button><br />
+				</div>
+			</div>
 			<div class="row" style="margin-top: 20px;">
-				<div class="col-xs-12 text-center">
-					<button class="myButton" href="https://www.framesdata.com/mfg/BOBOTH-VISION-CLINIC">Try on our glasses here, VIRTUALLY!</button><br />
+				<div class="col-xs-12">
 					(These are all the frames we have access to order. We are happy to order frames so you can try them on at our clinic. Have any questions or want to order some glasses? You can call us at <a href="tel:5098822650">509.882.2650</a>, or email us at <a href="mailto:doctors@bobothvision.com">doctors@bobothvision.com</a>, or send us a message on <a href="https://facebook.com/bobothvision">Facebook</a>.)
 				</div>
+				<div class="visible-xs" style="margin-top: 60px;"></div>
 			</div>
 		</div>
 	</section>
@@ -355,7 +343,7 @@
 					</div>
 
 					<div class="col-md-6 col-xs-12">
-						<form class="contact-form" method="post" action="send_email.php">
+						<form id="contact_form" class="contact-form" method="post" action="send_email.php">
 							<fieldset>
 								<div class="coll-1">							  
 									<input name="name" type="text" value="" required placeholder="Name:"><br>
@@ -397,7 +385,12 @@
 								
 							</fieldset>
 							<div class="buttons-wrapper clearfix">
-								<input type="submit" id="send-msg">
+								<!-- <input type="submit" id="send-msg"> -->
+								<input type="submit" class="g-recaptcha" 
+									data-sitekey="6LfLzVEaAAAAAOxKPWKkOMZE99xTDLrFTi5RuZm7" 
+									data-callback='onSubmit' 
+									data-action='submit'
+									data-size="invisible">
 							</div>
 						</form>
 					</div>
@@ -457,6 +450,8 @@
 	<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script> 
 	<script src="js/bootstrap.min.js" type="text/javascript"></script> 
 
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+
 </body>
 
 <script type="text/javascript">
@@ -475,6 +470,10 @@
 	$('#request_appt_check').change(function () {
 		$('#appt_fields').toggle();
 	});
+
+	function onSubmit(token) {
+		document.getElementById("contact_form").submit();
+	}
 
 </script>
 </html>
