@@ -148,7 +148,7 @@
 				Our staff pride themselves on taking the necessary time with each patient to provide exceptional service in a comfortable, caring and professional environment.
 			</div>
 			<div class="team-content">
-				<img class="img-responsive" src="images/doctors.jpg" alt="">
+				<img class="img-responsive" src="images/boboth-min.jpg" alt="BVC Doctors">
 			</div>
 	  	</div>
 	</section>
