@@ -47,31 +47,29 @@
 	}
 	?>
 	<header class="header">
-		<div class="container">
-			<nav class="navbar navbar-inverse" role="navigation">
-				<div class="navbar-header">
-					<button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> 
-						<span class="sr-only">Toggle navigation</span> 
-						<span class="icon-bar"></span> 
-						<span class="icon-bar"></span> 
-						<span class="icon-bar"></span> 
-					</button>
-					<a href="#" class="navbar-brand scroll-top logo animated bounceInLeft">
-						<img class="desktop-only" src="images/logo.png" width="50">
-						<b>Boboth Vision Clinic</b>
-					</a> 
-				</div>
-				<div id="main-nav" class="collapse navbar-collapse">
-					<ul class="nav navbar-nav" id="mainNav">
-						<li class="active" id="firstLink"><a href="#services" class="scroll-link">Services</a></li>
-						<li><a href="#glasses" class="scroll-link">Glasses</a></li>
-						<li><a href="#aboutUs" class="scroll-link">Doctors</a></li>
-						<li><a href="#work" class="scroll-link">Testimonials</a></li>
-						<li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
+		<nav class="navbar navbar-inverse" role="navigation">
+			<div class="navbar-header">
+				<button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> 
+					<span class="sr-only">Toggle navigation</span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+				</button>
+				<a href="#" class="navbar-brand scroll-top logo animated bounceInLeft" style="margin-left: 2rem">
+					<img class="desktop-only" src="images/logo.png" width="50">
+					<b>Boboth Vision Clinic</b>
+				</a> 
+			</div>
+			<div id="main-nav" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav" id="mainNav">
+					<li class="active" id="firstLink"><a href="#services" class="scroll-link">Services</a></li>
+					<li><a href="#glasses" class="scroll-link">Glasses</a></li>
+					<li><a href="#aboutUs" class="scroll-link">Doctors</a></li>
+					<li><a href="#work" class="scroll-link">Testimonials</a></li>
+					<li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
+				</ul>
+			</div>
+		</nav>
 	</header>
 	
 	<div id="#top"></div>
@@ -131,7 +129,7 @@
 				</div>
 			</div>
 			<div class="row" style="margin-top: 20px;">
-				<div class="col-xs-12">
+				<div class="col-xs-12 text-center">
 					(These are all the frames we have access to order. We are happy to order frames so you can try them on at our clinic. Have any questions or want to order some glasses? You can call us at <a href="tel:5098822650">509.882.2650</a>, or email us at <a href="mailto:doctors@bobothvision.com">doctors@bobothvision.com</a>, or send us a message on <a href="https://facebook.com/bobothvision">Facebook</a>.)
 				</div>
 				<div class="visible-xs" style="margin-top: 60px;"></div>
@@ -144,11 +142,27 @@
 		<div class="container">
 			<div class="heading text-center"> 
 				<h2>Our Doctors</h2>
-				<p>Boboth Vision Clinic is a family owned and operated practice. Our optometrists are graduates of Sunnyside High School and Pacific University College of Optometry. 
-				Our staff pride themselves on taking the necessary time with each patient to provide exceptional service in a comfortable, caring and professional environment.
+				<p>Boboth Vision Clinic is a family owned and operated practice. We have been proudly serving the community for over 35 years, and have grown from a small, single-doctor practice into one of the leading providers in the Lower Valley. We are pleased to be able to offer innovative diagnostic and treatment options, as well as top-of-the-line retail eyewear. Our doctors and staff pride themselves on taking the necessary time with each patient to provide exceptional service in a comfortable, caring, and professional environment.
 			</div>
-			<div class="team-content">
+			<div class="team-content text-center">
 				<img class="img-responsive" src="images/boboth-min.jpg" alt="BVC Doctors">
+			</div>
+			<div class="row" style="margin-top: 4rem">
+				<div class="col-xs-12 col-md-4 text-center">
+					<img src="images/everett.jpg">
+					<h2>Dr. Everett Boboth</h2>
+					After graduating from Pacific University College of Optometry in Forest Grove, Oregon, in 2012, Dr. Everett moved to Grandview to join his father in practicing optometry. He has enjoyed researching and implementing innovative technology in the clinic to better serve the patients. He lives in Sunnyside and enjoys serving in his local church, playing and watching sports, having adventures, and spending time with his wife and four kids.
+				</div>
+				<div class="col-xs-12 col-md-4 text-center">
+					<img src="images/cole.jpg">
+					<h2>Dr. Cole Boboth</h2>
+					Dr. Cole joined the team of physicians in 2014 following his graduation from Pacific University College of Optometry in Forest Grove, Oregon. He has enjoyed developing Boboth Vision Clinic’s in-house lens edging service, enabling patients to get their glasses on the same day. Dr. Cole lives in Grandview with his wife, Laura, and their two kids, and he enjoys golfing, serving in his local church, family bike rides, and wrestling with his kids.
+				</div>
+				<div class="col-xs-12 col-md-4 text-center">
+					<img src="images/cameron.jpg">
+					<h2>Dr. Cameron Boboth</h2>
+					After Dr. Cameron graduated from Midwestern University in Phoenix, Arizona, in 2017, he then embarked on a Pediatric and Vision Therapy residency in Arkansas where he’d stay until 2019. He joined the Boboth Vision Clinic team in June 2020 and has brought his expertise to the valley! Dr. Cameron has implemented new screening techniques and vision therapy at the clinic. He lives in West Richland and enjoys golfing, spending time with family, and mining cryptocurrency.
+				</div>
 			</div>
 	  	</div>
 	</section>
