@@ -47,7 +47,6 @@
 	}
 	?>
 	<header class="header">
-<<<<<<< HEAD
 		<nav class="navbar navbar-inverse" role="navigation">
 			<div class="navbar-header">
 				<button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> 
@@ -71,33 +70,6 @@
 				</ul>
 			</div>
 		</nav>
-=======
-		<div class="container">
-			<nav class="navbar navbar-inverse" role="navigation">
-				<div class="navbar-header">
-					<button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> 
-						<span class="sr-only">Toggle navigation</span> 
-						<span class="icon-bar"></span> 
-						<span class="icon-bar"></span> 
-						<span class="icon-bar"></span> 
-					</button>
-					<a href="#" class="navbar-brand scroll-top logo animated bounceInLeft">
-						<img class="desktop-only" src="images/logo.png" width="50">
-						<b>Boboth Vision Clinic</b>
-					</a> 
-				</div>
-				<div id="main-nav" class="collapse navbar-collapse">
-					<ul class="nav navbar-nav" id="mainNav">
-						<li class="active" id="firstLink"><a href="#services" class="scroll-link">Services</a></li>
-						<li><a href="#glasses" class="scroll-link">Glasses</a></li>
-						<li><a href="#aboutUs" class="scroll-link">Doctors</a></li>
-						<li><a href="#work" class="scroll-link">Testimonials</a></li>
-						<li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
->>>>>>> b0703b0301995ac2aeccece4d422af5fb4370747
 	</header>
 	
 	<div id="#top"></div>

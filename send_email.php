@@ -35,20 +35,18 @@ if(isset($_POST['email'])) {
  
     $error_message = "";
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
- 
-  if(!preg_match($email_exp,$email_from)) {
-    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
-  }
- 
-    $string_exp = "/^[A-Za-z .'-]+$/";
- 
-  if(!preg_match($string_exp,$name)) {
-    $error_message .= 'The name you entered does not appear to be valid.<br />';
-  }
- 
-  if(strlen($error_message) > 0) {
-    died($error_message);
-  }
+	if(!preg_match($email_exp,$email_from)) {
+		$error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+	}
+	
+	$string_exp = "/^[A-Za-z .'-]+$/";
+	if(!preg_match($string_exp,$name)) {
+		$error_message .= 'The name you entered does not appear to be valid.<br />';
+	}
+	
+	if(strlen($error_message) > 0) {
+		died($error_message);
+	}
  
     $email_message = "Form details below.\n\n";
    
