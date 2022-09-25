@@ -351,6 +351,7 @@
 							<tr>
 								<td colspan="2">
 									<h3><a href="https://facebook.com/bobothvision"><i class="fa fa-facebook-square"></i> Like Us On Facebook</a></h3>
+									<h3><a href="BVC_Privacy_Policy.pdf"><i class="fa fa-file-pdf-o"></i> View Our HIPAA Privacy Policy</a></h3>
 								</th>
 							</tbody>
 						</table>
