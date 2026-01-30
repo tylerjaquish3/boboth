@@ -161,13 +161,13 @@
 				<div class="col-xs-12 col-md-4 text-center">
 					<img src="images/cameron.jpg">
 					<h2>Dr. Cameron Boboth</h2>
-					After Dr. Cameron graduated from Midwestern University in Phoenix, Arizona, in 2017, he then embarked on a Pediatric and Vision Therapy residency in Arkansas where he’d stay until 2019. He joined the Boboth Vision Clinic team in June 2020 and has brought his expertise to the valley! Dr. Cameron has implemented new screening techniques and vision therapy at the clinic. He lives in West Richland and enjoys golfing, spending time with family, and mining cryptocurrency.
+					After Dr. Cameron graduated from Midwestern University in Phoenix, Arizona, in 2017, he then embarked on a Pediatric and Vision Therapy residency in Arkansas where he’d stay until 2019. He joined the Boboth Vision Clinic team in June 2020 and has brought his expertise to the valley! Dr. Cameron has implemented new screening techniques and vision therapy at the clinic. He enjoys golfing, spending time with family, and mining cryptocurrency.
 				</div>
 			</div>
 	  	</div>
 	</section>
 
-	<!--Reviews -->
+	<!-- Testimonials Section -->
 	<section id="work" class="page-section page">
 		<div class="container text-center">
 			<div class="heading">
@@ -176,135 +176,59 @@
 				That is why we appreciate when our patients take the time to tell us what makes us extraordinary and what needs improvement.</p>
 
 				<div id="text-carousel" class="carousel slide" data-ride="carousel">
-				    <!-- Wrapper for slides -->
-				    <div class="row">
-				        <div class="col-md-offset-2 col-md-8 col-xs-12" id="testimonial-div">
-				            <div class="carousel-inner">
-				                <div class="item active">
-				                    <div class="carousel-content">
-			                            <p><i class="fa fa-quote-left"></i> Dr. Everett was very caring and explained in great detail also went back to charts to last year visit to compare this exam. Great doctor! <i class="fa fa-quote-right"></i></p>
-				                    </div>
-				                </div>
-				                <div class="item">
-				                    <div class="carousel-content">
-			                            <p><i class="fa fa-quote-left"></i> I enjoyed the staff friendless & willingness to help. Dr. Cole is genuine. <i class="fa fa-quote-right"></i></p>
-				                    </div>
-				                </div>	
-				                <div class="item">
-				                    <div class="carousel-content">
-			                            <p><i class="fa fa-quote-left"></i> Appreciated the thoroughness of my exam and and the time taken to answer questions. <i class="fa fa-quote-right"></i></p>
-				                    </div>
-				                </div>	
-				                <div class="item">
-				                    <div class="carousel-content">
-			                            <p><i class="fa fa-quote-left"></i> Dr. Fred Boboth has been my optometrist for probably twenty years. The eye care is excellent; he and his staff are always courteous, friendly and helpful. <i class="fa fa-quote-right"></i></p>
-				                    </div>
-				                </div>	
-				                <div class="item">
-				                    <div class="carousel-content">
-			                            <p><i class="fa fa-quote-left"></i> Had a nice visit & the reception was the best. The woman went out of her way to help me with my selection & an easier way to get prescriotion easier :-D Thank you. <i class="fa fa-quote-right"></i></p>
-				                    </div>
-				                </div>
-				                <div class="item">
-				                    <div class="carousel-content">
-			                            <p><i class="fa fa-quote-left"></i> Loved the environment and the friendly staff. Definitely coming back and recommending this palace to my friends and family! <i class="fa fa-quote-right"></i></p>
-				                    </div>
-								</div>	
+					<div class="row">
+						<div class="col-md-offset-2 col-md-8 col-xs-12" id="testimonial-div">
+							<div class="carousel-inner">
+								<?php
+								// ===========================================
+								// TESTIMONIALS LIST
+								// To add a new testimonial, add a new string to this array.
+								// The first testimonial will be marked as "active" automatically.
+								// ===========================================
+								$testimonials = [
+									"Dr. Everett was very caring and explained in great detail also went back to charts to last year visit to compare this exam. Great doctor!",
+									// "I enjoyed the staff friendliness & willingness to help. Dr. Cole is genuine.",
+									"Appreciated the thoroughness of my exam and the time taken to answer questions.",
+									"So very pleased with how professional Dr. Boboth was. I came to him for a 2nd opinion on a glasses prescription, and he put me at ease to know that yes my previous prescription was incorrect. Definitely will be returning.",
+									"Had a nice visit & the reception was the best. The woman went out of her way to help me with my selection & an easier way to get prescription easier :-D Thank you.",
+									"Loved the environment and the friendly staff. Definitely coming back and recommending this place to my friends and family!",
+									"I love going here to have my eyes checked. They are very nice and you are in and out. If you have questions, they will sit and talk to you.",
+									"Staff was very friendly, the waiting area was set up according to our guidelines and the rooms were clean. The doctor was very nice and answered all my questions and concerns.",
+									"Great location, friendly staff, state of the art equipment, new building, and top line Doctors!",
+									"Clinic overall is excellent. Staff are friendly. Dr and tech did a fabulous job to try to get my child to do the sight exam. Dr had alternative ways to find a diagnosis for my noncooperative child. Their patience was excellent.",
+									// "I enjoy Maria M. She is always so helpful and informative. I have been very pleased and like going to Boboth. Thank you",
+									"Nice, new facility. Very clean. Staff is so friendly and helpful. Dr. Everett was knowledgeable and up on the latest updates for contact lenses.",
+									"It was nice to walk into a friendly atmosphere. The Eye Doctor listened to my concerns and answered all my questions.",
+									// "Was great to be in a new building a lot bigger not feeling so crowded. And of course the help was excellent as always. And Maria is a fantastic worker. Thank You All",
+									// "The Doctor and staff are always so personable and kind, making visits very comfortable. The new office is incredible and is very accommodating for the current state of social distancing.",
+									"Dr. Everett is about the friendliest person you will meet. He greets all his patients as though he's been looking forward to seeing them all day. In fact, the entire staff is patient and friendly. This is a very professional family-run practice.",
+									"Excellent doctors and I've been going to the clinic since I was a kid and I have never had no issues with the doctor's office. All the doctors who work here are very cool and work with you pretty well. 😃 The staff treats you really well with respect and helps you out if you need it.",
+									"Great communication. Detailed explanations of what we were doing and why. Super friendly and helpful!",
+									"Literally the only eye doctor I will go to. Highly recommend Dr. Cole he is smart kind and very professional and has the steadiest hands. He has helped extract foreign objects from my eyeballs many times and it's always very professional, pain free and done with finesse.",
+								];
 
-								<!-- ==========================NEW ONES============================= -->
-								<div class="item">
-									<div class="carousel-content">
-										<p><i class="fa fa-quote-left"></i> 
-											I love going here to have my eyes checked. They are very nice and you are in and out. If you have questions, they will sit and talk to you.<i class="fa fa-quote-right"></i></p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="carousel-content">
-										<p><i class="fa fa-quote-left"></i> 
-											Staff was very friendly, the waiting area was set up according to our guidelines and the rooms were clean. The doctor was very nice and answered all my questions and concerns.<i class="fa fa-quote-right"></i></p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="carousel-content">
-										<p><i class="fa fa-quote-left"></i> 
-											Great location, friendly staff, state of the art equipment, new building, and top line Doctors!<i class="fa fa-quote-right"></i></p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="carousel-content">
-										<p><i class="fa fa-quote-left"></i> 
-											The dr. Was very good and nice.<i class="fa fa-quote-right"></i></p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="carousel-content">
-										<p><i class="fa fa-quote-left"></i> 
-											I enjoy Maria M. She is always so helpful and informative. I have been very pleased and like going to Boboth. Thank you<i class="fa fa-quote-right"></i></p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="carousel-content">
-										<p><i class="fa fa-quote-left"></i> 
-											Nice, new facility. Very clean. Staff is so friendly and helpful. Dr. Everett was knowledgeable and up on the latest updates for contact lenses.<i class="fa fa-quote-right"></i></p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="carousel-content">
-										<p><i class="fa fa-quote-left"></i> 
-											It was nice to walk into a friendly atmosphere. The Eye Doctor listened to my concerns and answered all my questions.<i class="fa fa-quote-right"></i></p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="carousel-content">
-										<p><i class="fa fa-quote-left"></i> 
-											Was great to be in a new building a lot bigger not feeling so crowded. And of course the help was excellent as always. And Maria is a fantastic worker. Thank You All<i class="fa fa-quote-right"></i></p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="carousel-content">
-										<p><i class="fa fa-quote-left"></i> 
-											The Doctor and staff are always so personable and kind, making visits very comfortable. The new office is incredible and is very accommodating for the current state of social distancing.<i class="fa fa-quote-right"></i></p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="carousel-content">
-										<p><i class="fa fa-quote-left"></i> 
-											Dr. Everett is about the friendliest person you will meet. He greets all his patients as though he's been looking forward to seeing them all day. In fact, the entire staff is patient and friendly. This is a very professional family-run practice.<i class="fa fa-quote-right"></i></p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="carousel-content">
-										<p><i class="fa fa-quote-left"></i> 
-											Excellent doctors and I've been going to the clinic since I was a kid and I have never had no issues with the doctor's office all the doctors who work here are very cool and work with you pretty well cool cool.😃and the staff treats you really well with respect and helps you out if you need it.<i class="fa fa-quote-right"></i></p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="carousel-content">
-										<p><i class="fa fa-quote-left"></i> 
-											Great communication. Detailed explanations of what we were doing and why. Super friendly and helpful!<i class="fa fa-quote-right"></i></p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="carousel-content">
-										<p><i class="fa fa-quote-left"></i> 
-											Friendly knowledgeable staff<i class="fa fa-quote-right"></i></p>
-									</div>
-								</div>
-				                
-				            </div>
-				        </div>
-				    </div>
+								foreach ($testimonials as $index => $testimonial) {
+									$activeClass = ($index === 0) ? 'active' : '';
+									echo '<div class="item ' . $activeClass . '">';
+									echo '    <div class="carousel-content">';
+									echo '        <p><i class="fa fa-quote-left"></i> ' . htmlspecialchars($testimonial) . ' <i class="fa fa-quote-right"></i></p>';
+									echo '    </div>';
+									echo '</div>';
+								}
+								?>
+							</div>
+						</div>
+					</div>
 
-					<!-- Controls --> 
+					<!-- Carousel Controls -->
 					<a class="left carousel-control" href="#text-carousel" data-slide="prev">
 						<i class="fa fa-angle-left"></i>
 					</a>
 					<a class="right carousel-control" href="#text-carousel" data-slide="next">
 						<i class="fa fa-angle-right"></i>
 					</a>
-
 				</div>
-			</div>	 
+			</div>
 		</div>
 	</section>
 
