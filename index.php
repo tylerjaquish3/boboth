@@ -120,6 +120,10 @@
 	<section id="glasses" class="page-section page">
 		<div class="container">
 			<div class="row text-center">
+				<a href="https://bobothvisionclinic.myeyestore.com" class="myButton" target="_blank">Order your contact lenses, eye drops, etc HERE! </a>
+			</div>
+			<hr />
+			<div class="row text-center">
 				<div class="col-xs-12 col-md-3 col-md-push-3">
 					<img src="/images/2B674052.jpg">
 				</div>
@@ -151,17 +155,17 @@
 				<div class="col-xs-12 col-md-4 text-center">
 					<img src="images/everett.jpg">
 					<h2>Dr. Everett Boboth</h2>
-					After graduating from Pacific University College of Optometry in Forest Grove, Oregon, in 2012, Dr. Everett moved to Grandview to join his father in practicing optometry. He has enjoyed researching and implementing innovative technology in the clinic to better serve the patients. He lives in Sunnyside and enjoys serving in his local church, playing and watching sports, having adventures, and spending time with his wife and four kids.
+					After graduating from Pacific University College of Optometry in Forest Grove, Oregon in 2012, Dr. Everett moved to Grandview to join his father in practicing optometry. He continues to care for his patients as he enjoys investing in the community by serving his local church, coaching baseball, and spending time with his wife and kids.
 				</div>
 				<div class="col-xs-12 col-md-4 text-center">
 					<img src="images/cole.jpg">
 					<h2>Dr. Cole Boboth</h2>
-					Dr. Cole joined the team of physicians in 2014 following his graduation from Pacific University College of Optometry in Forest Grove, Oregon. He has enjoyed developing Boboth Vision Clinic’s in-house lens edging service, enabling patients to get their glasses on the same day. Dr. Cole lives in Grandview with his wife, Laura, and their two kids, and he enjoys golfing, serving in his local church, family bike rides, and wrestling with his kids.
+					Dr. Cole joined the team of physicians in 2014 following his graduation from Pacific University College of Optometry in Forest Grove, Oregon. He has worked hard to develop Boboth Vision Clinic so it gives the best quality of care through innovative technologies. Dr. Cole lives in Grandview with his wife and two kids, and he enjoys golfing, serving his church, and playing board games with his family.
 				</div>
 				<div class="col-xs-12 col-md-4 text-center">
 					<img src="images/cameron.jpg">
 					<h2>Dr. Cameron Boboth</h2>
-					After Dr. Cameron graduated from Midwestern University in Phoenix, Arizona, in 2017, he then embarked on a Pediatric and Vision Therapy residency in Arkansas where he’d stay until 2019. He joined the Boboth Vision Clinic team in June 2020 and has brought his expertise to the valley! Dr. Cameron has implemented new screening techniques and vision therapy at the clinic. He enjoys golfing, spending time with family, and mining cryptocurrency.
+					After Dr. Cameron graduated from Midwestern University in Phoenix, Arizona in 2017, he then embarked on a Pediatric and Vision Therapy residency in Arkansas where he'd stay until 2019. He joined the Boboth Vision Clinic team in June 2020 to bring his expertise to the valley. Dr. Cameron has since moved back to Phoenix, but still makes time to return to his first home to golf with his dad, drink coffee with his mom, and work at Boboth Vision Clinic with his brothers.
 				</div>
 			</div>
 	  	</div>
