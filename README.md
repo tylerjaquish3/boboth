@@ -131,3 +131,10 @@ The following secrets must be configured in the repository settings (`Settings >
 ## License
 
 All Rights Reserved - Boboth Vision Clinic
+
+**SSL
+- Purchased 5 year certificate (PositiveSSL) on 3/6/26 from sectigo.com
+- Had to get a CSR doc from Charter so I could purchase the certificate
+- Sectigo sent me the keys via email, forwarded those to Charter to install
+- Go to sectigo.com and login and choose Cert Panel and use lastpass
+- No auto renewal
